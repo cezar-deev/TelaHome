@@ -1,0 +1,174 @@
+/* geral */
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #B0C4DE;
+}
+
+/* Todo Header - cabecalho do todo */
+.home-container {
+    background-color: #fdfdfd;
+    width: 1900px;
+    height:910px;
+    margin: 0.3rem auto;
+    padding: 1.1rem;
+    border-radius: 10px;
+}
+
+.home-container header {
+    background-color: #0a0a0a;
+    font-size: 8px;
+    color: #fdfdfd;
+    text-align: center;
+    border-radius: 8px;
+    padding: 1rem 1rem 1rem 1rem;
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+
+                                 /* Home Form  - Geral*/
+.geral-form {
+    display: inline-block;
+    
+}
+
+.principal-form {
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    width: 1500px;
+    height:910px;
+    margin: 15px;
+    border-radius: 8px;
+    background-color: #c1c0c528;
+}
+
+
+
+                              /* Home Form  - Lateria de cima*/
+#lateral-form-a {
+    display: inline;
+    background-color: #c1c0c5;
+    padding: 1rem 1rem 1rem 1rem;
+    max-width: 600px;
+    height: 400px;
+    margin-top: 1rem;
+    border-radius: 35px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+
+     
+}
+
+
+.pastas-lateral-form-a div {
+    width: 150px;
+    width: 100px;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    color: rgb(228, 151, 8);
+    cursor: pointer;
+}
+
+
+                             /*botões - Lateral em cima */
+.button-lateral-form-a button {
+    width: 150px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 1rem;
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 1px solid #ff7675;
+    padding: .3rem .1rem; 
+    font-size: 0.7rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: 0.4s;
+    
+    
+}
+
+
+                             /* Home Form  - Lateral de baixo*/
+#lateral-form-b {
+    background-color: #c1c0c5;
+    padding: 1rem 1rem 1rem 1rem;
+    max-width: 390px;
+    height: 400px;
+    margin-top: 1rem;
+    border-radius: 0px 0px 35px 0px;
+     
+}
+
+#lateral-form-b {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.button-lateral-form-b div {
+    font-family: helvetica;
+    font-size: 15px;
+    padding: 4px;
+}
+
+
+                         /*botões - Lateria de baixo */
+.button-lateral-form-b button {
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 0px 10px 0px 0px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: #4c97b48e;
+    color: #fdfdfd;
+    padding: .3rem .1rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: 0.4s;
+    box-shadow: #0a0a0a;
+
+}
+
+/* Form Principal*/
+
+.principal-form-e {
+    background-color: #4c97b433;
+    width: 740px;
+    height:790px;     
+}
+
+.principal-form-e h3,
+.principal-form-d h3 {
+    font-size: 15px;
+    background-color: #0a0a0a;
+    color: #fdfdfd;
+    padding: 12px;
+    font-style: italic;
+    border-radius: 8px;
+}
+
+
+.principal-form-d {
+    background-color: #4c97b433;
+    width: 740px;
+    height:790px;
+      
+}
+
+#piechart {
+    width: 600px; height: 200px;
+    border-radius: 8px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Home</title>
+    <!-- css do projeto-->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font AWesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Java Script-->
+    <script src="./JS/script.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+
+<body>
+    <div class="home-container">
+        <header>
+            <h1>TELA HOME STRUCTURE</h1>
+        </header>
+        <div id="geral-form">
+            <div class="geral-form lateral-form">
+                <form id="lateral-form-a">
+                    <div class="pastas-lateral-form-a">     
+                        <div><a><i class="fa-regular fa-folder-open"></i></a></div>
+                        <div><a><i class="fa-regular fa-folder-open"></i></a></div>
+                        <div><a><i class="fa-regular fa-folder-open"></i></a></div>
+                                               
+                    </div> 
+                    
+                    <div class="button-lateral-form-a">     
+                        <div><button>WAGNER</button></div>
+                        <div><button>COMPONENTES</button></div>
+                        <div><button>LOTES RFI</button></div>
+                        <div><button>COPI</button></div>
+                        <div><button>CLASSES</button></div>
+                        <div><button>SOLDADORES EJA</button></div>
+                        <div><button>CADASTRAR</button></div>
+                        <div><button>LOTES PM/US</button></div>
+                        <div><button>DIVERSOS</button></div>
+                        
+                    </div>    
+                </form> 
+                <form id="lateral-form-b">
+                    <div class="button-lateral-form-b">     
+                        <div><button>CTS</button></div>
+                        <div><button>CTS WEB</button></div>
+                        <div><button>ISI REPORT</button></div>
+                        <div><button>ACCES RFI</button></div>
+                        <div><button>PROGRESSO</button></div>
+                        <div><button>BUTTON</button></div>
+                    </div> 
+                    <div class="button-lateral-form-b">     
+                        <div><button>CTB</button></div>
+                        <div><button>ISICQ</button></div>
+                        <div><button>VISUAL STUDIO</button></div>
+                        <div><button>E-MAIL</button></div>
+                        <div><button>BAT</button></div>
+                        <div><button>BUTTON</button></div>
+                    </div>    
+                </form>
+            </div>
+
+            <div class="geral-form principal-form">
+                <div class="geral-form principal-form-e">
+                    <h3>SOFTWARE OPERACIONAL</h3>
+                </div>
+                <div class="geral-form principal-form-d">
+                    <h3>GERENCIADOR DE PROJETO</h3>
+                    <div id="piechart"></div>                
+                </div>
+            </div>    
+        </div>
+    </div>
+
+
+
+    
+    <!-- Java Script-->
+
+    <!-- grafico B1-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    
+
+</body>
+</html>
