@@ -197,22 +197,6 @@ body {
     
 }
 
-/* --- FORM DE ITENS - LADO DIREITO) --- */
-.lado-A {
-    box-shadow: 5px 5px 17px black;
-    background-color: #fff;
-    margin-right: 5px;
-    border-radius: 0px 0px 0px 0px;
-    
-}
-.lado-B {   
-    border-radius: 0px 0px 18px 0px; 
-    box-shadow: 5px 5px 17px black;
-    background-color: #fdfdfd;
-    display: flex;
-    flex-direction: column;
-          
-}
 .lado-A h3,
 .lado-B h3 {
     font-size: 15px;
@@ -225,11 +209,22 @@ body {
     text-align: center;
 }
 
+
+
+/* --- FORM DE ITENS - LADO-B --- */
+.lado-B {   
+    border-radius: 0px 0px 18px 0px; 
+    box-shadow: 5px 5px 17px black;
+    background-color: #e4990d36;
+    display: flex;
+    flex-direction: column;
+          
+}
+
 .lado-B-container{
     width: 735px;
     height: 800px ;
-    background-color: #e9f0f067;
-    
+    /*background-color: #e9f0f067;*/
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -298,4 +293,38 @@ body {
 
 .lado-B-item-3-1 iframe {
     margin:15px;
+}
+
+
+
+/* --- FORM DE ITENS - LADO-A --- */
+
+
+.lado-A {   
+    border-radius: 0px 0px 18px 0px; 
+    box-shadow: 5px 5px 17px black;
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+          
+}
+
+.lado-A-container{
+    width: 735px;
+    height: 800px ;
+    background-color: #6c97b4ad;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.lado-A-container-itens {
+    margin-top: 5px;
+    text-align: center;
+    background-color: #dfd4c498;
+    width: 735px;
+    height: calc(752px /3);
+    box-shadow: 5px 5px 17px black;
+    border-radius: 18px 18px 18px 18px; 
+    
 }
