@@ -10,8 +10,10 @@ body {
     background: #B0C4DE;
 }
 
+
+/* --- HOME PRINCIPAL ( FUNDO GERAL PRINCIPAL )--- */
 .home-container {
-    background-color: #f5eded;
+    
     width: 1900px;
     height:910px;
     margin: 0.3rem auto;
@@ -20,17 +22,17 @@ body {
     
 }
 
-/* --- HOME CONTAINER ( TODA PAGINA )--- */
+/* --- HOME TITULO ( TITULO PRINCIPAL )--- */
 .home-container header {
     background-color: #0a0a0a;
-    font-size: 8px;
-    color: #fff;
+    font-size: 10px;
+    color:#fff;
     text-align: center;
     border-radius: 8px;
     padding: 1rem 1rem 1rem 1rem;
     height: 60px;
-
 }
+
 
 
 
@@ -41,7 +43,6 @@ body {
     margin-top: 10px;
     width: 1860px;
     height:820px;
-    background-color: #b4afaf;
     border-radius: 8px;       
 }
 .geral-form-lateral {
@@ -49,15 +50,14 @@ body {
     border-radius: 8px;
 
 }
-/* --- FORMULARIO - LADO ESQUERDO ) --- */
+/* --- FORMULARIO COM OS BOTÕES - LADO ESQUERDO ) --- */
 .form-E{
     border-radius: 8px;
-    background-color: #fff;
+    
 }
-/* --- FORMULARIO - LADO DIREITO ) --- */
+/* --- FORMULARIO LARGO - LADO DIREITO ) --- */
 .form-D {
-    border-radius: 8px;
-    background-color: #fff;
+    border-radius: 8px;    
     height:810px;
     flex-grow: 1;
     display: flex;
@@ -79,19 +79,23 @@ body {
       
 }
 .button-lateral-form-a {
+    border: #0a0a0a solid 1px;
+    border-radius: 15px 1px 15px 1px ;
     max-width: 300px;
     margin: 0 auto;
     text-align: center;
+    font-size: 12px;
+    box-shadow: 5px 5px 15px black;
+    
 }
 .btn-r {
     background-color: transparent;
-    border: 2px solid #e74c3c;
     border-radius: 0.6em;
     cursor: pointer;
     display: flex;
     font-weight: 400;
-    margin: 10px;
-    padding: 1.2em 2.8em;
+    margin: 5px;
+    padding: 0.6em 2.8em;
     text-decoration: none; /* retira o traço de link*/
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -107,13 +111,36 @@ body {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
-                         
+
+#form-a1 {
+    margin-top: 5px;
+    padding: 2px 10px 9px 10px ;
+}
+
+#form-a2 {
+    margin-top: 15px;
+    padding: 2px 10px 9px 10px ;
+}
+
+#titulo-link {
+    background-color: #c1c0c5;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+    width: 379px; 
+
+}
+
+
+
+
+
 /* --- FORM DE ITENS - LADO ESQUERDO - ABAIXO ) --- */
 #lateral-form-b {
     background-color: #c1c0c5;
     padding: 1rem 1rem 1rem 1rem;
     max-width: 380px;
-    height: 417px;
+    height: 390px;
     margin-top: 1rem;
     border-radius: 0px 0px 35px 0px;
     margin: 0;
@@ -129,7 +156,7 @@ body {
        -moz-appearance: none;
             appearance: none;
     background-color: transparent;
-    border: 3px solid #e74c3c;
+    border: 2px solid #e74c3c;
     border-radius: 0.4em;
     color: #e74c3c;
     cursor: pointer;
