@@ -226,10 +226,22 @@ body {
     text-align: center;
 }
 
-.grafico-container-A {
-    width: 720px;
-    height: 100px ;
+.lado-B-container{
+    width: 735px;
+    height: 800px ;
     background-color: #ad9570;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
+.lado-B-container-itens {
+    margin-top: 5px;
+    text-align: center;
+    background-color: #e9f0f0;
+    width: 735px;
+    height: calc(752px /3);
+    box-shadow: 5px 5px 17px black;
+    border-radius: 18px 18px 18px 18px; 
+    
 }
