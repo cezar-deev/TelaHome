@@ -11,13 +11,12 @@ body {
 }
 
 
-/* --- HOME PRINCIPAL ( FUNDO GERAL PRINCIPAL )--- */
+                           /* --- HOME PRINCIPAL ( FUNDO GERAL PRINCIPAL )--- */
 .home-container {
     
     width: 1900px;
     height:910px;
-    margin: 0.3rem auto;
-    padding: 1.1rem;
+    padding: 1rem;
     border-radius: 10px;
     
 }
@@ -28,11 +27,11 @@ body {
     font-size: 10px;
     color:#fff;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 1rem 1rem 1rem 1rem;
     height: 60px;
+    box-shadow: 3px 3px 15px rgb(163, 116, 115);
 }
-
 
 
 
@@ -42,50 +41,41 @@ body {
     flex-direction: row;
     margin-top: 10px;
     width: 1860px;
-    height:820px;
-    border-radius: 8px;       
+    height:820px;       
 }
 .geral-form-lateral {
     flex-basis: 385px;
-    border-radius: 8px;
+    
+    padding: 2px 1px 9px 10px ;
 
 }
-/* --- FORMULARIO COM OS BOTÕES - LADO ESQUERDO ) --- */
+                          /* --- FORMULARIO COM OS BOTÕES - LADO ESQUERDO ) --- */
 .form-E{
-    border-radius: 8px;
+    border-radius: 18px 0px 0px 18px;
+    box-shadow: 5px 5px 15px black;
+    max-width: 370px;
+    
     
 }
-/* --- FORMULARIO LARGO - LADO DIREITO ) --- */
-.form-D {
-    border-radius: 8px;    
-    height:810px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-    
-}
-
 
 
 /* --- FORM DE ITENS - LADO ESQUERDO - ACIMA ) --- */
-
 #lateral-form-a {
-    background-color: #c1c0c5;
     padding: 1rem 1rem 1rem 1rem;
-    max-width: 380px;
+    max-width: 370px;
     height: 400px;
     margin-top: 0.1rem;
-    border-radius: 35px 0px 0px 0px;
+    
+    
       
 }
 .button-lateral-form-a {
-    border: #0a0a0a solid 1px;
     border-radius: 15px 1px 15px 1px ;
     max-width: 300px;
     margin: 0 auto;
     text-align: center;
     font-size: 12px;
-    box-shadow: 5px 5px 15px black;
+    box-shadow: 5px 5px 17px black;
     
 }
 .btn-r {
@@ -113,7 +103,7 @@ body {
 
 
 #form-a1 {
-    margin-top: 5px;
+    margin-top: 3px;
     padding: 2px 10px 9px 10px ;
 }
 
@@ -123,7 +113,7 @@ body {
 }
 
 #titulo-link {
-    background-color: #c1c0c5;
+    
     font-size: 12px;
     text-align: center;
     margin: auto;
@@ -132,12 +122,9 @@ body {
 }
 
 
-
-
-
 /* --- FORM DE ITENS - LADO ESQUERDO - ABAIXO ) --- */
 #lateral-form-b {
-    background-color: #c1c0c5;
+    
     padding: 1rem 1rem 1rem 1rem;
     max-width: 380px;
     height: 390px;
@@ -156,7 +143,7 @@ body {
        -moz-appearance: none;
             appearance: none;
     background-color: transparent;
-    border: 2px solid #e74c3c;
+    border: 1.2px solid #e74c3c;
     border-radius: 0.4em;
     color: #e74c3c;
     cursor: pointer;
@@ -178,6 +165,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin-top: 15px;
+    width: 160px;
 }
 
 
@@ -189,7 +177,7 @@ body {
 
 .first {
     -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
+    transition: box-shadow 500ms ease-in-out, color 800ms ease-in-out;
 }
 .first:hover {
     box-shadow: 0 0 40px 40px #e74c3c inset;
@@ -197,18 +185,34 @@ body {
 
 
 
-/* --- FORM DE ITENS - LADO DIREITO) --- */
-.lado-A {
-    
-    background-color: #fff;
-    border: 1px solid #0a0a0a;
-    margin-right: 3px;
+
+
+                           /* --- FORMULARIO LARGO - LADO DIREITO ) --- */
+
+
+.form-D {       
+    height:820px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
     
 }
-.lado-B {
+
+/* --- FORM DE ITENS - LADO DIREITO) --- */
+.lado-A {
+    box-shadow: 5px 5px 17px black;
+    background-color: #fff;
+    margin-right: 5px;
+    border-radius: 0px 0px 0px 0px;
+    
+}
+.lado-B {   
+    border-radius: 0px 0px 18px 0px; 
+    box-shadow: 5px 5px 17px black;
     background-color: #fdfdfd;
-    border: 1px solid #0a0a0a;
-      
+    display: flex;
+    flex-direction: column;
+          
 }
 .lado-A h3,
 .lado-B h3 {
@@ -217,8 +221,15 @@ body {
     color: #fdfdfd;
     padding: 12px;
     font-style: italic;
-    border-radius: 8px;
-    height: 45px;
-    width: 734px;
-    text-align: center; 
+    height: 50px;
+    width: 737px;
+    text-align: center;
+}
+
+.grafico-container-A {
+    width: 720px;
+    height: 100px ;
+    background-color: #ad9570;
+    margin: 0 auto;
+
 }
