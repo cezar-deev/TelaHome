@@ -229,7 +229,7 @@ body {
 .lado-B-container{
     width: 735px;
     height: 800px ;
-    background-color: #ad9570;
+    background-color: #ad94705d;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -238,10 +238,29 @@ body {
 .lado-B-container-itens {
     margin-top: 5px;
     text-align: center;
-    background-color: #e9f0f0;
+    background-color: #e9f0f067;
     width: 735px;
     height: calc(752px /3);
     box-shadow: 5px 5px 17px black;
     border-radius: 18px 18px 18px 18px; 
     
 }
+
+.lado-B-item-1 {
+    display: flex;
+    flex-direction: row;
+}
+.lado-B-item-1-1 {
+    background-color: #3498db59;
+    width: 370px;
+    min-height: 100px;
+    box-shadow: 5px 5px 17px black;
+    border-radius: 18px 18px 18px 18px;
+    margin: 3px;
+}
+
+.lado-B-item-1-1 iframe {
+    margin:15px;
+}
+
+
