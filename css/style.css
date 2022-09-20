@@ -30,7 +30,7 @@ body {
     border-radius: 5px;
     padding: 1rem 1rem 1rem 1rem;
     height: 60px;
-    box-shadow: 3px 3px 15px rgb(163, 116, 115);
+    box-shadow: 3px 3px 15px hsl(29, 88%, 52%);
 }
 
 
@@ -45,7 +45,6 @@ body {
 }
 .geral-form-lateral {
     flex-basis: 385px;
-    
     padding: 2px 1px 9px 10px ;
 
 }
@@ -220,7 +219,7 @@ body {
     background-color: #0a0a0a;
     color: #fdfdfd;
     padding: 12px;
-    font-style: italic;
+    
     height: 50px;
     width: 737px;
     text-align: center;
