@@ -1,0 +1,78 @@
+/* geral */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* CORPO DA APLICAÇÃO */
+
+body {
+
+    background: rgb(199, 197, 197);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color:#fff
+}
+
+.container-geral {
+    min-height: 400px;
+    min-width: 400px;
+    background-color: #6675a3;
+    padding: 1rem;
+    
+}
+
+
+/* FORM CONTAINER MATERIAL*/
+.container-material h2 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.container-tubo h2,h3 {
+    background-color: #5c5f69;
+    font-size: 1rem;
+    text-align: center;
+    padding: .5rem;
+    margin: .5rem;
+}
+
+.table-header {
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.table-header h4 {
+    min-width: 89px;
+    margin-bottom: 0.3rem;
+    border: 1px solid #ccc;
+    padding: .6rem;
+    text-align: center;
+    
+}
+
+.table-itens {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    min-height: 40px;
+    max-width: 90px;
+    padding: .6rem;
+}
+
+#table-itens-total {
+    padding-top: 2rem;
+    justify-content: right;
+    padding: 2rem .3rem 2rem 2rem;
+
+}
