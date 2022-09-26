@@ -2,25 +2,22 @@
 
 // --- SELEÇÃO DE ELEMENTOS --- // 
 
-const compPrincipal = document.querySelector("#compP");
-const pesoPrincipal = document.querySelector("#pesoP");
-const resultPrincipal = document.querySelector("#resultP");
+const compPInput = document.querySelector("#compP");
+const pesoPInput = document.querySelector("#pesoP");
+const resPDiv = document.querySelector("#resP");
 
-const CompDeriv = document.querySelector("#compD");
-const pesoDeriv = document.querySelector("#pesoD");
-const resultDeriv = document.querySelector("#resultD");
-
-
-// --- FUNÇÕES  --- //
+const compDInput = document.querySelector("#compD");
+const pesoDInput = document.querySelector("#pesoD");
+const resDDiv = document.querySelector("#resD");
 
 
+//  EVENTO //
 
-function pesoTubPrincipal() {
-
-    let peso = pesoPrincipal/compPrincipal
-    console.log(peso)
-}
+//const compPInput = 10;
 
 
-// --- INICIALIZAÇÃO DAS TABELAS  --- //
-pesoTubPrincipal();
+console.log(compPInput)
+
+
+
+
