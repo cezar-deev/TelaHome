@@ -60,7 +60,7 @@ body {
 
 .table-itens {
     display:flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -73,6 +73,6 @@ body {
 #table-itens-total {
     padding-top: 2rem;
     justify-content: right;
-    padding: 2rem .3rem 2rem 2rem;
+    padding: 2rem .2rem 2rem 2rem;
 
 }
