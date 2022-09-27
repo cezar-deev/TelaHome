@@ -70,9 +70,32 @@ body {
     padding: .6rem;
 }
 
-#table-itens-total {
-    padding-top: 2rem;
-    justify-content: right;
-    padding: 2rem .2rem 2rem 2rem;
+#container-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#btn-calc {
+    color: #fff;
+    background-color: #5c5f69;
+    margin-top: 1.3rem;
+    padding: .7rem;
+    width: 120px;
+    border:none;
+    font-size: 15px;
+    opacity: 0.8;
+    cursor: pointer;
+    
+}
+
+#btn-calc:hover {
+    opacity: 1.3;
+}
+
+#table-itens-total h4 {
+    margin-top: 1rem;
+    min-width: 200px;
+    
 
 }
