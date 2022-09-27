@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculo Peso Spool</title>
     <link rel="stylesheet" href="./css/style.calculoPeso.Spool.css">
-    <script src="./JS/script.calculoPeso.Spool.js" defer></script>
 
+    <script src="./JS/scriptSpool.js" defer></script>
+    
 </head>
+
+
 <body>
     <div class="container-geral">
        <div class="container-material">
@@ -22,22 +25,23 @@
                         <h4>Peso</h4>
                         <h4>Result</h4>
                     </div>
-                    <div class="table-itens">
+                    <form class="table-itens">
                         <h4 class="item" >Principal:</h4>
-                        <input id="compP" class="item" type="number" placeholder="mm">
-                        <input id="pesoP" class="item" type="number" placeholder="kg">
-                        <div id="resultP" class="item">0</div>
-                    </div>
-                    <div class="table-itens">
+                        <input type="text" id="comp1" class="item" placeholder="mm">
+                        <input type="text" id="peso1" class="item" placeholder="kg">
+                        <div id="res1" class="item"></div>
+                    </form>
+                    <form class="table-itens">
                         <h4 class="item" >Derivação: </h4>
                         <input id="compD" class="item" type="text" placeholder="mm">
                         <input id="pesoD" class="item" type="text" placeholder="kg">
-                        <div id="resultD" class="item">0</div>
-                    </div>
-                    <div id="table-itens-total" class="table-itens">
+                        <div id="resultD" class="item"></div>
+                    </form>
+                    <form id="table-itens-total" class="table-itens">
                         <h4 class="item" >Total: </h4>
-                        <div id="totalM" class="item">0</div>
-                    </div>
+                        <div id="totalM" class="item"></div>
+                    </form>
+                    <button onclick="calcular()">Calcular</button>
             </div>
 
     </div>
