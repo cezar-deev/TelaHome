@@ -108,7 +108,8 @@ body {
     
 }
 
-#btn-calc:hover {
+.btn-calc:hover {
+    background-color: #383838;
     opacity: 1.3;
 }
 
@@ -122,12 +123,14 @@ body {
 
 /* FORM CONTAINER CONEXÃO*/
 
-
 .table-itens-conexao {
     display:flex;
     justify-content: left;
     align-items: center;
+}
 
+.table-itens-conexao h4,div {
+    padding-top: 12px;
 }
 
 .item-conexao {
@@ -137,3 +140,34 @@ body {
     
 }
 
+.table-itens-total h4 {
+    margin: 1.5rem;
+    text-align: center;
+    
+}
+
+#container-btn-conexao{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.btn-calc-conexao {
+    color: #fff;
+    background-color: #5c5f69;
+    margin-top: .5rem;
+    margin-left: .3rem;
+    margin-right: .3rem;
+    padding: .7rem;
+    width: 120px;
+    border:none;
+    font-size: 15px;
+    opacity: 0.8;
+    cursor: pointer;
+    
+}
+
+.btn-calc-conexao:hover {
+    background-color: #383838;
+    opacity: 1.3;
+}
