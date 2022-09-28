@@ -49,8 +49,5 @@ function calcPesoTot() {
     document.getElementById('res1').innerHTML = calculo1.toFixed(1)+" Kg";
     document.getElementById('res2').innerHTML = calculo2.toFixed(1)+" Kg";
     document.getElementById('res3', "kg").innerHTML = total.toFixed(1)+" Kg";
-    
-    
-            
-        
+         
 }
