@@ -76,10 +76,11 @@ body {
     align-items: center; 
 }
 
-#btn-calc {
+.btn-calc {
     color: #fff;
     background-color: #5c5f69;
     margin-top: 1.3rem;
+    margin-left: .3rem;
     padding: .7rem;
     width: 120px;
     border:none;

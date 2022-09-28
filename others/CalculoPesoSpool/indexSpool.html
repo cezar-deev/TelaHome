@@ -29,7 +29,7 @@
                         <h4 class="item" >Principal:</h4>
                         <input type="text" id="comp1" class="item" placeholder="mm" maxlength="5">
                         <input type="text" id="peso1" class="item" placeholder="kg" maxlength="5">
-                        <div id="res1" class="item">0</div>
+                        <div type="float" id="res1" class="item">0</div>
                     </form>
                     <form class="table-itens">
                         <h4 class="item" >Derivação: </h4>
@@ -41,7 +41,9 @@
                         <h4 class="item" >Peso Total: <span id="res3">0</span></h4>
                     </form>
                     <div id="container-btn">
-                        <button id="btn-calc" onclick="calcular()">Calcular</button>
+                        <button class="btn-calc" id="btn-principal" onclick="calcPincipal()">Principal</button>
+                        <button class="btn-calc" id="btn-devivacao" onclick="calcDerivacao()">Derivação</button>
+                        <button class="btn-calc" id="btn-total" onclick="calcPesoTot()">Total</button>
                     </div>
                     
             </div>
