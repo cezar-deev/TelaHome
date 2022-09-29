@@ -62,6 +62,7 @@ body {
 .container-tubo {
     border-right: 1px solid #fff;
     padding-right: 5px;
+    padding-top: 0;
 }
 
 .container-conexao {
