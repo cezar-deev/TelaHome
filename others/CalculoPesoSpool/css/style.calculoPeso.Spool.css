@@ -19,34 +19,56 @@ body {
 }
 
 .container-geral {
+    display: inline;
     min-height: 400px;
     min-width: 400px;
     background-color: #6675a3;
     padding: 1rem;
-    text-align: center;    
+      
 }
 
 .container-geral h2 {
-    margin: .6rem;
+    margin-bottom: .6rem;
+}
+
+.container-titulo {
+    display:flex;
+    justify-content: space-around;
+    gap: 3;
+}
+
+#titulo-material {
+    padding-left: 100px;
+    
+    
+}
+
+#titulo-conexao {
+    
+   
 }
 
 
-/* FORM CONTAINER MATERIAL*/
+                                      /* FORM CONTAINER MATERIAL*/
 
-.container-material {
+.container-material-spool {
     display: flex;
     justify-content: center;
     
 }
 
-.container-material h2 {
+.container-material-spool h2 {
     text-align: center;
     font-size: 1.3rem;
-    margin-bottom: 1rem;
     padding: 0;
 }
 .container-tubo {
     border-right: 1px solid #fff;
+    padding-right: 5px;
+}
+
+.container-conexao {
+    padding-left: 5px;
 }
 
 
@@ -55,8 +77,7 @@ body {
     background-color: #5c5f69;
     font-size: 1rem;
     text-align: center;
-    padding: .5rem;
-    margin: .5rem;
+    padding: .5rem;  
 }
 
 .table-header {
@@ -77,17 +98,27 @@ body {
 
 .table-itens {
     display:flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
 }
 
-.item {
-    min-height: 40px;
-    max-width: 90px;
-    padding: .6rem;
+.table-itens h4 {
+    padding-top:10px;
+    padding-right: 20px;
 }
 
+
+
+.item {
+    font-size: 15px;
+    min-height: 40px;
+    width: 88px;
+    text-align: center;
+}
+
+
 #container-btn{
+    margin-top: 170px;
     display:flex;
     justify-content: center;
     align-items: center; 
@@ -121,7 +152,9 @@ body {
 }
 
 
-/* FORM CONTAINER CONEXÃO*/
+
+                                     /* FORM CONTAINER CONEXÃO*/
+
 
 .table-itens-conexao {
     display:flex;
@@ -130,13 +163,15 @@ body {
 }
 
 .table-itens-conexao h4,div {
+    font-size: 15px;
     padding-top: 12px;
 }
 
 .item-conexao {
     font-size: 15px;
     min-height: 40px;
-    width: 95px;
+    width: 88px;
+    text-align: center;
     
 }
 
@@ -171,3 +206,8 @@ body {
     background-color: #383838;
     opacity: 1.3;
 }
+
+
+                                     /* FORM CONTAINER TUBO-SPOOL*/
+
+                                     

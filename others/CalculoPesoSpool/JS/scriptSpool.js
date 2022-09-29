@@ -12,7 +12,7 @@ function calcPincipal () {
         alert("Peso não pode ser menor ou igual a zero ")
     }
 
-    document.getElementById('res1').innerHTML = total1.toFixed(3)+" Kg";
+    document.getElementById('res1').innerHTML = total1.toFixed(3);
 }
 
 function calcDerivacao () {
@@ -27,7 +27,7 @@ function calcDerivacao () {
         alert("Peso não pode ser menor ou igual a zero ")
     }
 
-    document.getElementById('res2').innerHTML = total2.toFixed(3)+" Kg";
+    document.getElementById('res2').innerHTML = total2.toFixed(3);
 }
 
 function calcPesoTot() {
