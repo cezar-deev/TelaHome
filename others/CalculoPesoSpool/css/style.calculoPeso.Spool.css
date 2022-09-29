@@ -39,14 +39,11 @@ body {
 
 #titulo-material {
     padding-left: 100px;
-    
-    
+     
 }
 
-#titulo-conexao {
+
     
-   
-}
 
 
                                       /* FORM CONTAINER MATERIAL*/
@@ -68,7 +65,7 @@ body {
 }
 
 .container-conexao {
-    padding-left: 5px;
+    padding: 0 5px 0 5px;
 }
 
 
@@ -171,8 +168,7 @@ body {
     font-size: 15px;
     min-height: 40px;
     width: 88px;
-    text-align: center;
-    
+    text-align: center;  
 }
 
 .table-itens-total h4 {
@@ -187,7 +183,10 @@ body {
     align-items: center; 
 }
 
-.btn-calc-conexao {
+
+/* BOTOES */ 
+
+button {
     color: #fff;
     background-color: #5c5f69;
     margin-top: .5rem;
@@ -202,12 +201,77 @@ body {
     
 }
 
-.btn-calc-conexao:hover {
+button:hover {
     background-color: #383838;
     opacity: 1.3;
 }
 
 
-                                     /* FORM CONTAINER TUBO-SPOOL*/
+                                     /* FORM CONTAINER SPOOL*/
 
+.container-tubos-spool {
+    display:flex;
+    justify-content: center;
+    border-left: 1px solid #fff;
+    padding: 0 5px 0 5px;
+        
+}
                                      
+/* SPOOL - TUBO PRINCIPAL */
+
+.tubo-spool-principal,
+.tubo-spool-derivacao {
+    padding: 0; 
+}
+
+
+#tubo-spool-titulo1,
+#tubo-spool-titulo2,
+#tubo-spool-titulo3,
+#tubo-spool-titulo4 {
+    background-color: #5c5f69;
+    font-size: 1rem;
+    text-align: center;
+    padding: 8px;
+    width: 178px;   
+}
+
+.table-header-spool {
+    display:flex;
+    justify-content: center;
+}
+
+.table-header-spool h4 {
+    min-width: 89px;
+    margin-bottom: 0.3rem;
+    border: 1px solid #ccc;
+    padding: .6rem;
+    text-align: center;
+    font-size:15px;    
+}
+
+.table-itens-spool {
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    border-top: 0;
+}
+
+.item-spool {
+    font-size: 15px;
+    min-height: 40px;
+    width: 88px;
+    text-align: center;  
+}
+
+.table-itens-spool h4,div {
+    font-size: 15px;
+    padding-top: 12px;
+}
+
+
+
+
+
+
+/* SPOOL - TUBO PRINCIPAL */
