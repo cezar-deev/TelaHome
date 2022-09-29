@@ -65,13 +65,15 @@ body {
     padding-top: 0;
 }
 
-.container-conexao {
+.container-conexao,
+.container-conexao-spool {
     padding: 0 5px 0 5px;
 }
 
 
 .container-tubo h2,h3,
-.container-conexao h2,h3 {
+.container-conexao h2,h3,
+.container-conexao-spool h2,h3 {
     background-color: #5c5f69;
     font-size: 1rem;
     text-align: center;
@@ -151,7 +153,7 @@ body {
 
 
 
-                                     /* FORM CONTAINER CONEXÃO*/
+                                     /* FORM CONTAINER CONEXÃO E CONEXÃO DOS SPOOL*/
 
 
 .table-itens-conexao {
@@ -178,14 +180,21 @@ body {
     
 }
 
+/* BOTOES */ 
+
 #container-btn-conexao{
     display:flex;
     justify-content: center;
     align-items: center; 
 }
 
+#container-btn-conexao-spool{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; 
+}
 
-/* BOTOES */ 
 
 button {
     color: #fff;
@@ -214,6 +223,7 @@ button:hover {
     display:flex;
     justify-content: center;
     border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
     padding: 0 5px 0 5px;
         
 }
@@ -240,6 +250,7 @@ button:hover {
 .table-header-spool {
     display:flex;
     justify-content: center;
+    padding-top: 0;
 }
 
 .table-header-spool h4 {
