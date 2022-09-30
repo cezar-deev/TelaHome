@@ -155,13 +155,8 @@ function calculaCompTuboSpool () {
 // calculos do comprimento x peso  - Tubo Pricipal
 function calculaPesoTuboSpool() {
     
-    var pesoTubo = calcPrincipal()
-    var compTubos = calculaCompTuboSpool()
-
-    var resultTuboSpool = pesoTubo * compTubos
-
+    var resultTuboSpool = calcPrincipal() * calculaCompTuboSpool()
     document.getElementById('res-tubo-peso-spool').innerHTML = resultTuboSpool ;
-
 }
 
 
@@ -177,3 +172,19 @@ function onlynumber(evt) {
        if(theEvent.preventDefault) theEvent.preventDefault();
     }
  }
+
+
+//Soma dos Comprimentos - Tubo derivacao
+function calculaCompTuboSpoolDeriv () {
+
+    var compTubSp1d = document.getElementById('item1-spool-derivacao').value;
+    var compTubSp2d = document.getElementById('item2-spool-derivacao').value;
+    var compTubSp3d = document.getElementById('item3-spool-derivacao').value;
+    var compTubSp4d = document.getElementById('item4-spool-derivacao').value;
+    var compTubSp5d = document.getElementById('item5-spool-derivacao').value;
+    
+    var compTotal = compTubSp1d +++ compTubSp2d +++ compTubSp3d +++ compTubSp4d +++ compTubSp5d;
+    document.getElementById('res-tubo-comp-spool-d').innerHTML = compTotal;
+
+
+}

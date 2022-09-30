@@ -167,7 +167,7 @@
                                 >
                             </form>
                             <form class="table-itens-spool">
-                                <h4 class="item-spool">Comp Total:</h4>
+                                <h4 class="item-spool">Comp:</h4>
                                 <div type="float" id="res-tubo-comp-spool" class="item-conexao"></div>
                                 
                             </form>
@@ -178,7 +178,7 @@
                             </form>    
                         </div>
                         <div>
-                            <button onclick="calculaPesoTuboSpool ()">Calcular</button>
+                            <button onclick="calculaCompTuboSpool ()">Calcular</button>
                         </div>
 
                 </div>
@@ -194,7 +194,7 @@
                         <form class="table-itens-spool">
                             <h4 class="item-spool">Item 1</h4>
                             <input
-                                id="item5-spool-derivacao"  
+                                id="item1-spool-derivacao"  
                                 class="item-spool" 
                                 type="text"
                                 onkeypress="return onlynumber()" 
@@ -204,23 +204,51 @@
                         </form>
                         <form class="table-itens-spool">
                             <h4 class="item-spool">Item 2</h4>
-                            <input class="item-spool" type="text" placeholder=" mm" maxlength="6">
+                            <input
+                                id="item2-spool-derivacao"   
+                                class="item-spool" 
+                                type="text"
+                                onkeypress="return onlynumber()"  
+                                placeholder=" mm" 
+                                maxlength="4"
+                            >
                         </form>
                         <form class="table-itens-spool">
                             <h4 class="item-spool">Item 3</h4>
-                            <input class="item-spool"type="text" placeholder=" mm" maxlength="6">
+                            <input
+                            id="item3-spool-derivacao"   
+                                class="item-spool"
+                                type="text"
+                                onkeypress="return onlynumber()"  
+                                placeholder=" mm" 
+                                maxlength="4"
+                            >
                         </form>
                         <form class="table-itens-spool">
                             <h4 class="item-spool">Item 4</h4>
-                            <input class="item-spool" type="text" placeholder=" mm" maxlength="6">
+                            <input
+                            id="item4-spool-derivacao"   
+                                class="item-spool" 
+                                type="text"
+                                onkeypress="return onlynumber()"  
+                                placeholder=" mm" 
+                                maxlength="4"
+                            >
                         </form>
                         <form class="table-itens-spool">
                             <h4 class="item-spool">Item 5</h4>
-                            <input class="item-spool" type="text" placeholder=" mm" maxlength="6">
+                            <input
+                                id="item5-spool-derivacao"   
+                                class="item-spool"
+                                type="text"
+                                onkeypress="return onlynumber()"  
+                                placeholder=" mm" 
+                                maxlength="4"
+                            >
                         </form>
                         <form class="table-itens-spool">
                             <h4 class="item-spool">Comp Tubo:</h4>
-                            <div type="float" id="" class="item-conexao">0</div>
+                            <div type="float" id="res-tubo-comp-spool-d" class="item-conexao">0</div>
                            
                         </form>
                         <form class="table-itens-spool">
@@ -230,7 +258,7 @@
                         </form>    
                     </div>
                         <div>
-                            <button>Calcular</button>
+                            <button onclick="calculaCompTuboSpoolDeriv ()">Calcular</button>
                         </div>
                 </div>
             </div>
