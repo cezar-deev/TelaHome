@@ -1,6 +1,7 @@
 
 // <<  CALCULOS DE MATERIAL - TUBO >> //
 
+
 function calcPrincipal() {
     var comprimento1 = document.getElementById('comp1').value;
     var peso1 = document.getElementById('peso1').value;
@@ -15,6 +16,7 @@ function calcPrincipal() {
 
     document.getElementById('res1').innerHTML = total1.toFixed(3);
 }
+
 
 function calcDerivacao () {
     var comprimento2 = document.getElementById('comp2').value;
@@ -133,3 +135,6 @@ function calculaConecaoTodas () {
 }
 
 
+// >>  CALCULOS SPOOL - PESSO << //
+
+FUN
