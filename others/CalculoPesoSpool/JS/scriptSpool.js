@@ -135,8 +135,9 @@ function calculaConecaoTodas () {
 }
 
 
-// >>  CALCULOS SPOOL - PESSO << //
+// >>  CALCULOS SPOOL  << //
 
+//Soma dos Comprimentos - Tubo Pricipal
 function calculaCompTuboSpool () {
 
     var compTubSp1 = document.getElementById('item1-spool-pricnipal').value;
@@ -144,27 +145,27 @@ function calculaCompTuboSpool () {
     var compTubSp3 = document.getElementById('item3-spool-pricnipal').value;
     var compTubSp4 = document.getElementById('item4-spool-pricnipal').value;
     var compTubSp5 = document.getElementById('item5-spool-pricnipal').value;
-
     
     var compTotal = compTubSp1 +++ compTubSp2 +++ compTubSp3 +++ compTubSp4 +++ compTubSp5;
+    document.getElementById('res-tubo-comp-spool').innerHTML = compTotal;
 
-    document.getElementById('res-tubo-spool').innerHTML = compTotal;
+
 }
 
-
-function calculaCompTuboSpool() {
-   
-
-
-
-
-
-
+// calculos do comprimento x peso  - Tubo Pricipal
+function calculaPesoTuboSpool() {
     
+    var pesoTubo = calcPrincipal()
+    var compTubos = calculaCompTuboSpool()
+
+    var resultTuboSpool = pesoTubo * compTubos
+
+    document.getElementById('res-tubo-peso-spool').innerHTML = resultTuboSpool ;
+
 }
 
 
-// Nao permite digitar virgula
+// Nao permite digitar virgula  - Tubo Pricipal
 function onlynumber(evt) {
     var theEvent = evt || window.event;
     var key = theEvent.keyCode || theEvent.which;
