@@ -137,4 +137,42 @@ function calculaConecaoTodas () {
 
 // >>  CALCULOS SPOOL - PESSO << //
 
-FUN
+function calculaCompTuboSpool () {
+
+    var compTubSp1 = document.getElementById('item1-spool-pricnipal').value;
+    var compTubSp2 = document.getElementById('item2-spool-pricnipal').value;
+    var compTubSp3 = document.getElementById('item3-spool-pricnipal').value;
+    var compTubSp4 = document.getElementById('item4-spool-pricnipal').value;
+    var compTubSp5 = document.getElementById('item5-spool-pricnipal').value;
+
+    
+    var compTotal = compTubSp1 +++ compTubSp2 +++ compTubSp3 +++ compTubSp4 +++ compTubSp5;
+
+    document.getElementById('res-tubo-spool').innerHTML = compTotal;
+}
+
+
+function calculaCompTuboSpool() {
+   
+
+
+
+
+
+
+    
+}
+
+
+// Nao permite digitar virgula
+function onlynumber(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode( key );
+    //var regex = /^[0-9.,]+$/;
+    var regex = /^[0-9.]+$/;
+    if( !regex.test(key) ) {
+       theEvent.returnValue = false;
+       if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+ }
