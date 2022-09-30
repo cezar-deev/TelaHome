@@ -55,6 +55,24 @@ function calcPesoTot() {
 // <<  CALCULOS DE MATERIAL - CONEXÃO >> //
 
 
+function calcPesoConexao_x () {
+
+    var quantidadeConexao = document.getElementById('comp1-conexao').value;
+    var pesoConexao = document.getElementById('peso1-conexao').value;
+
+    var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+
+    if (quantidadeConexao=="" || pesoConexao=="" || quantidadeConexao=="" || pesoConexao=="" ) {
+        alert("Insira uma valor ")
+    } if (quantidadeConexao==0 || pesoConexao==0 || quantidadeConexao==0 || pesoConexao==0 ){
+        alert("valor nao pode ser igual a zero ")
+    }
+
+    document.getElementById('res1-conexao').innerHTML = calculo.toFixed(3);
+}
+
+
+
 
 
 
