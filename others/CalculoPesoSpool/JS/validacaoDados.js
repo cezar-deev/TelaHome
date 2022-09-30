@@ -42,3 +42,14 @@ export {validaZero, validaVazio}
 
     document.getElementById('res1').innerHTML = total1.toFixed(3);
 }  */
+
+
+/*
+
+if (quantidadeConexao=="" || pesoConexao=="" || quantidadeConexao=="" || pesoConexao=="" ) {
+            alert("Insira uma valor ")
+        } if (quantidadeConexao==0 || pesoConexao==0 || quantidadeConexao==0 || pesoConexao==0 ){
+            alert("valor nao pode ser igual a zero ")
+        }
+
+*/        

@@ -22,7 +22,7 @@
         
             <div class="container-tubo">
                 <h2>TUBO</h2>
-                <h3>Peso por milímetro</h3>
+                <h3>Peso do tubo por milímetro</h3>
                     <div class="table-header">
                         <h4>Tipo</h4>
                         <h4>Comp</h4>
@@ -54,7 +54,7 @@
             <!-- MATERIAL CONEXÃO-->
             <div class="container-conexao">
                 <h2>CONEXÃO</h2>
-                <h3>Peso da Unidade</h3>
+                <h3>Peso de material por Unidade</h3>
                 <div class="table-header">
                     <h4>Itens</h4>
                     <h4>Qtd</h4>
@@ -63,42 +63,42 @@
                 </div>
                 <form class="table-itens-conexao">
                     <h4 class="item-conexao">Item  1</h4>
-                    <input type="text" id="comp1-conexao" class="item-conexao" placeholder=" Qtd" maxlength="3">
+                    <input type="text" id="comp1-conexao" class="item-conexao" placeholder=" Qtd" maxlength="2">
                     <input type="text" id="peso1-conexao" class="item-conexao" placeholder=" kg" maxlength="5">
                     <div type="float" id="res1-conexao" class="item-conexao">0</div>
                 </form>
                 <form class="table-itens-conexao">
                     <h4 class="item-conexao" >Item  2</h4>
-                    <input type="text" id="comp2-conexao" class="item-conexao" placeholder=" Qtd" maxlength="3">
+                    <input type="text" id="comp2-conexao" class="item-conexao" placeholder=" Qtd" maxlength="2">
                     <input type="text" id="peso2-conexao" class="item-conexao" placeholder=" kg" maxlength="5">
                     <div type="float" id="res2-conexao" class="item-conexao">0</div>
                 </form>
                 <form class="table-itens-conexao">
                     <h4 class="item-conexao" >Item  3</h4>
-                    <input type="text" id="comp3-conexao" class="item-conexao" placeholder=" Qtd" maxlength="3">
+                    <input type="text" id="comp3-conexao" class="item-conexao" placeholder=" Qtd" maxlength="2">
                     <input type="text" id="peso3-conexao" class="item-conexao" placeholder=" kg" maxlength="5">
                     <div type="float" id="res3-conexao" class="item-conexao">0</div>
                 </form>
                 <form class="table-itens-conexao">
                     <h4 class="item-conexao" >Item  4</h4>
-                    <input type="text" id="comp4-conexao" class="item-conexao" placeholder=" Qtd" maxlength="3">
+                    <input type="text" id="comp4-conexao" class="item-conexao" placeholder=" Qtd" maxlength="2">
                     <input type="text" id="peso4-conexao" class="item-conexao" placeholder=" kg" maxlength="5">
                     <div type="float" id="res4-conexao" class="item-conexao">0</div>
                 </form>
                 <form class="table-itens-conexao">
                     <h4 class="item-conexao" >Item  5</h4>
-                    <input type="text" id="comp5-conexao" class="item-conexao" placeholder=" Qtd" maxlength="3">
+                    <input type="text" id="comp5-conexao" class="item-conexao" placeholder=" Qtd" maxlength="2">
                     <input type="text" id="peso5-conexao" class="item-conexao" placeholder=" kg" maxlength="5">
                     <div type="float" id="res5-conexao" class="item-conexao">0</div>
                 </form>
                 
-                <form class="table-itens-total">
-                    <h4>Peso Total : <span id="res3">0</span></h4>
-                </form>
+                
                 
                 <div id="container-btn-conexao">
-                    <button class="btn-calc-conexao" id="btn-conexão" onclick="calcPesoConexao_x ()">Calcular</button>
+                    <button class="btn-calc-conexao" id="btn-conexão" onclick="calculaConecaoTodas ()">Calcular</button>
                 </div> 
+
+
             </div>
             <!-- SPOOL TUBOS-->
             <div class="container-tubos-spool">

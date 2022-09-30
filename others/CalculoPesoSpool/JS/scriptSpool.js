@@ -52,29 +52,9 @@ function calcPesoTot() {
     document.getElementById('res3', "kg").innerHTML = total.toFixed(3)+" Kg";         
 }
 
+
+
 // <<  CALCULOS DE MATERIAL - CONEXÃO >> //
-
-
-function calcPesoConexao_x () {
-
-    var quantidadeConexao = document.getElementById('comp1-conexao').value;
-    var pesoConexao = document.getElementById('peso1-conexao').value;
-
-    var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-
-    if (quantidadeConexao=="" || pesoConexao=="" || quantidadeConexao=="" || pesoConexao=="" ) {
-        alert("Insira uma valor ")
-    } if (quantidadeConexao==0 || pesoConexao==0 || quantidadeConexao==0 || pesoConexao==0 ){
-        alert("valor nao pode ser igual a zero ")
-    }
-
-    document.getElementById('res1-conexao').innerHTML = calculo.toFixed(3);
-}
-
-
-
-
-
 
 function calculaConecaoTodas () {
 
@@ -89,15 +69,12 @@ function calculaConecaoTodas () {
         var quantidadeConexao = document.getElementById('comp1-conexao').value;
         var pesoConexao = document.getElementById('peso1-conexao').value;
 
-        var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-
-        if (quantidadeConexao=="" || pesoConexao=="" || quantidadeConexao=="" || pesoConexao=="" ) {
-            alert("Insira uma valor ")
-        } if (quantidadeConexao==0 || pesoConexao==0 || quantidadeConexao==0 || pesoConexao==0 ){
-            alert("valor nao pode ser igual a zero ")
-        }
-
-        document.getElementById('res1-conexao').innerHTML = calculo.toFixed(3);
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res1-conexao').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res1-conexao').innerHTML = calculo.toFixed(1);
+            }    
     }
 
     function calcPesoConexao_2 () {
@@ -105,15 +82,12 @@ function calculaConecaoTodas () {
         var quantidadeConexao = document.getElementById('comp2-conexao').value;
         var pesoConexao = document.getElementById('peso2-conexao').value;
 
-        var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-
-        if (quantidadeConexao=="" || pesoConexao=="" || quantidadeConexao=="" || pesoConexao=="" ) {
-            alert("Insira uma valor ")
-        } if (quantidadeConexao==0 || pesoConexao==0 || quantidadeConexao==0 || pesoConexao==0 ){
-            alert("valor nao pode ser igual a zero ")
-        }
-
-        document.getElementById('res2-conexao').innerHTML = calculo.toFixed(3);
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res2-conexao').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res2-conexao').innerHTML = calculo.toFixed(2);
+            }    
     }
 
     function calcPesoConexao_3 () {
@@ -121,15 +95,12 @@ function calculaConecaoTodas () {
         var quantidadeConexao = document.getElementById('comp3-conexao').value;
         var pesoConexao = document.getElementById('peso3-conexao').value;
 
-        var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-
-        if (quantidadeConexao=="" || pesoConexao=="" || quantidadeConexao=="" || pesoConexao=="" ) {
-            alert("Insira uma valor ")
-        } if (quantidadeConexao==0 || pesoConexao==0 || quantidadeConexao==0 || pesoConexao==0 ){
-            alert("valor nao pode ser igual a zero ")
-        }
-
-        document.getElementById('res3-conexao').innerHTML = calculo.toFixed(3);
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res3-conexao').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res3-conexao').innerHTML = calculo.toFixed(2);
+            }    
     }
 
     function calcPesoConexao_4 () {
@@ -137,32 +108,28 @@ function calculaConecaoTodas () {
         var quantidadeConexao = document.getElementById('comp4-conexao').value;
         var pesoConexao = document.getElementById('peso4-conexao').value;
 
-        var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-
-        if (quantidadeConexao=="" || pesoConexao=="" || quantidadeConexao=="" || pesoConexao=="" ) {
-            alert("Insira uma valor ")
-        } if (quantidadeConexao==0 || pesoConexao==0 || quantidadeConexao==0 || pesoConexao==0 ){
-            alert("valor nao pode ser igual a zero ")
-        }
-
-        document.getElementById('res4-conexao').innerHTML = calculo.toFixed(3);
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res4-conexao').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res4-conexao').innerHTML = calculo.toFixed(2);
+            }    
     }
+
 
     function calcPesoConexao_5 () {
 
         var quantidadeConexao = document.getElementById('comp5-conexao').value;
         var pesoConexao = document.getElementById('peso5-conexao').value;
 
-        var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-
-        if (quantidadeConexao=="" || pesoConexao=="" || quantidadeConexao=="" || pesoConexao=="" ) {
-            alert("Insira uma valor ")
-        } if (quantidadeConexao==0 || pesoConexao==0 || quantidadeConexao==0 || pesoConexao==0 ){
-            alert("valor nao pode ser igual a zero ")
-        }
-
-        document.getElementById('res5-conexao').innerHTML = calculo.toFixed(3);
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res5-conexao').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res5-conexao').innerHTML = calculo.toFixed(2);
+            }    
     }
 
-
 }
+
+
