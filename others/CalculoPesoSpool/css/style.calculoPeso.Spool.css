@@ -322,3 +322,8 @@ button:hover {
     text-align: center;
     font-size:20px;
 }
+
+#voltar {
+    text-decoration: none;
+    color: #fff;
+}
