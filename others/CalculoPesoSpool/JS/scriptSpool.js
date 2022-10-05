@@ -1,5 +1,6 @@
 
-// <<  CALCULOS DE MATERIAL - TUBO >> //
+                          
+                          // <<<<<<<<<<<  CALCULOS DE MATERIAL - TUBO >>>>>>>>>>> //
 
 
 function calcPrincipal() {
@@ -16,7 +17,6 @@ function calcPrincipal() {
 
     document.getElementById('res1').innerHTML = total1.toFixed(3);
 }
-
 
 function calcDerivacao () {
     var comprimento2 = document.getElementById('comp2').value;
@@ -55,8 +55,7 @@ function calcPesoTot() {
 }
 
 
-
-// <<  CALCULOS DE MATERIAL - CONEXÃO >> //
+                          // <<  CALCULOS DE MATERIAL - CONEXÃO >> //
 
 function calculaConecaoTodas () {
 
@@ -135,9 +134,9 @@ function calculaConecaoTodas () {
 }
 
 
-// >>  CALCULOS SPOOL  << //
+// >>  CALCULOS SPOOL  - TUBOS << //
 
-//Soma dos Comprimentos - Tubo Pricipal
+// 1/4 - Soma dos Comprimentos - Tubo Pricipal
 function calculaCompTuboSpool () {
 
     var compTubSp1 = document.getElementById('item1-spool-pricnipal').value;
@@ -147,16 +146,83 @@ function calculaCompTuboSpool () {
     var compTubSp5 = document.getElementById('item5-spool-pricnipal').value;
     
     var compTotal = compTubSp1 +++ compTubSp2 +++ compTubSp3 +++ compTubSp4 +++ compTubSp5;
-    document.getElementById('res-tubo-comp-spool').innerHTML = compTotal;
-
+    document.getElementById('res-tubo-comp-spool').innerHTML = compTotal+" mm";
 
 }
 
-// calculos do comprimento x peso  - Tubo Pricipal
-function calculaPesoTuboSpool() {
+
+
+// 2/4 - Soma dos Comprimentos - Tubo derivacao
+function calculaCompTuboSpoolDeriv () {
+
+    var compTubSp1d = document.getElementById('item1-spool-derivacao').value;
+    var compTubSp2d = document.getElementById('item2-spool-derivacao').value;
+    var compTubSp3d = document.getElementById('item3-spool-derivacao').value;
+    var compTubSp4d = document.getElementById('item4-spool-derivacao').value;
+    var compTubSp5d = document.getElementById('item5-spool-derivacao').value;
     
-    var resultTuboSpool = calcPrincipal() * calculaCompTuboSpool()
-    document.getElementById('res-tubo-peso-spool').innerHTML = resultTuboSpool ;
+    var compTotal = compTubSp1d +++ compTubSp2d +++ compTubSp3d +++ compTubSp4d +++ compTubSp5d;
+    document.getElementById('res-conexao-comp-spool-d').innerHTML = compTotal+" mm";;
+
+}
+
+
+// 3/4 - Calculo do Peso - Tubo Pricipal
+function calculaPesoTuboSpool() {
+
+    var comprimento1 = document.getElementById('comp1').value;
+    var peso1 = document.getElementById('peso1').value;
+    var total1 = parseFloat(peso1) / parseFloat(comprimento1);
+
+    var compTubSp1 = document.getElementById('item1-spool-pricnipal').value;
+    var compTubSp2 = document.getElementById('item2-spool-pricnipal').value;
+    var compTubSp3 = document.getElementById('item3-spool-pricnipal').value;
+    var compTubSp4 = document.getElementById('item4-spool-pricnipal').value;
+    var compTubSp5 = document.getElementById('item5-spool-pricnipal').value;
+
+    var compTotal = compTubSp1 +++ compTubSp2 +++ compTubSp3 +++ compTubSp4 +++ compTubSp5;
+    resultTuboSpoolP =   parseFloat(compTotal) * parseFloat(total1)
+
+    document.getElementById('res-tubo-peso-spool').innerHTML = resultTuboSpoolP.toFixed(2)+" kg";
+    return compTotal
+}
+
+
+// 4/4 - Calculo do Peso  - Tubo Derivação
+function calculaPesoSpoolDeriv() {
+
+    var comprimento2 = document.getElementById('comp2').value;
+    var peso2 = document.getElementById('peso2').value;
+    var total2 = parseFloat(peso2)/parseFloat(comprimento2);
+
+    var compTubSp1d = document.getElementById('item1-spool-derivacao').value;
+    var compTubSp2d = document.getElementById('item2-spool-derivacao').value;
+    var compTubSp3d = document.getElementById('item3-spool-derivacao').value;
+    var compTubSp4d = document.getElementById('item4-spool-derivacao').value;
+    var compTubSp5d = document.getElementById('item5-spool-derivacao').value;
+    var compTotal2 = compTubSp1d +++ compTubSp2d +++ compTubSp3d +++ compTubSp4d +++ compTubSp5d;
+
+    resultTuboSpoolDeriv =   parseFloat(compTotal2) * parseFloat(total2)
+    
+    document.getElementById('res-conexao-peso-spool').innerHTML = resultTuboSpoolDeriv.toFixed(2)+" kg";
+    return compTotal2
+}
+
+
+
+// 4/4 - Botao Calcular Tubo
+function calculaCompPeso() {
+
+    calculaCompTuboSpool()
+    calculaPesoTuboSpool()
+    PesoSpoolFinal () 
+}
+
+// 4/4 - Botao Calcular Derivacao
+function calculaCompPesoDeriv() {
+
+    calculaCompTuboSpoolDeriv()
+    calculaPesoSpoolDeriv()
 }
 
 
@@ -171,20 +237,106 @@ function onlynumber(evt) {
        theEvent.returnValue = false;
        if(theEvent.preventDefault) theEvent.preventDefault();
     }
- }
+}
+
+                           // >>  CALCULOS SPOOL - CONEXÕES  << //
 
 
-//Soma dos Comprimentos - Tubo derivacao
-function calculaCompTuboSpoolDeriv () {
+function calculaConecaoTodasSP() {
 
-    var compTubSp1d = document.getElementById('item1-spool-derivacao').value;
-    var compTubSp2d = document.getElementById('item2-spool-derivacao').value;
-    var compTubSp3d = document.getElementById('item3-spool-derivacao').value;
-    var compTubSp4d = document.getElementById('item4-spool-derivacao').value;
-    var compTubSp5d = document.getElementById('item5-spool-derivacao').value;
+    calcPesoConexaoSP_1 ()
+    calcPesoConexaoSP_2 ()
+    calcPesoConexaoSP_3 ()
+    calcPesoConexaoSP_4 ()
+    calcPesoConexaoSP_5 ()
+    calculaCompTuboSpool ()
+
+    function calcPesoConexaoSP_1 () {
+
+        var quantidadeConexao = document.getElementById('qtd1-conexaoSP').value;
+        var pesoConexao = document.getElementById('peso1-conexaoSP').value;
+
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res1-conexaoSP').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res1-conexaoSP').innerHTML = calculo.toFixed(1);
+            }    
+    }
+
+    function calcPesoConexaoSP_2 () {
+
+        var quantidadeConexao = document.getElementById('qtd2-conexaoSP').value;
+        var pesoConexao = document.getElementById('peso2-conexaoSP').value;
+
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res2-conexaoSP').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res2-conexaoSP').innerHTML = calculo.toFixed(2);
+            }    
+    }
+
+    function calcPesoConexaoSP_3 () {
+
+        var quantidadeConexao = document.getElementById('qtd3-conexaoSP').value;
+        var pesoConexao = document.getElementById('peso3-conexaoSP').value;
+
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res3-conexaoSP').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res3-conexaoSP').innerHTML = calculo.toFixed(2);
+            }    
+    }
+
+    function calcPesoConexaoSP_4 () {
+
+        var quantidadeConexao = document.getElementById('qtd4-conexaoSP').value;
+        var pesoConexao = document.getElementById('peso4-conexaoSP').value;
+
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res4-conexaoSP').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res4-conexaoSP').innerHTML = calculo.toFixed(2);
+            }    
+    }
+
+
+    function calcPesoConexaoSP_5 () {
+
+        var quantidadeConexao = document.getElementById('qtd5-conexaoSP').value;
+        var pesoConexao = document.getElementById('peso5-conexaoSP').value;
+
+        if (quantidadeConexao=="" || pesoConexao==""){
+            document.getElementById('res5-conexaoSP').innerHTML = 0;
+        } else {  
+                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
+                document.getElementById('res5-conexaoSP').innerHTML = calculo.toFixed(2);
+            }    
+    }
+
+    function calculaCompTuboSpool () {
+
+        var qtdConexaoSp1 = document.getElementById('qtd1-conexaoSP').value;
+        var qtdConexaoSp2 = document.getElementById('qtd2-conexaoSP').value;
+        var qtdConexaoSp3 = document.getElementById('qtd3-conexaoSP').value;
+        var qtdConexaoSp4 = document.getElementById('qtd4-conexaoSP').value;
+        var qtdConexaoSp5 = document.getElementById('qtd5-conexaoSP').value;
+        
+        var compTotal = qtdConexaoSp1 +++ qtdConexaoSp2 +++ qtdConexaoSp3 +++ qtdConexaoSp4 +++ qtdConexaoSp5;
+        document.getElementById('res-qtd-conexao-spool').innerHTML = compTotal;
     
-    var compTotal = compTubSp1d +++ compTubSp2d +++ compTubSp3d +++ compTubSp4d +++ compTubSp5d;
-    document.getElementById('res-tubo-comp-spool-d').innerHTML = compTotal;
+    
+    }
 
+}
 
+function PesoSpoolFinal () {
+
+    console.log(calculaPesoTuboSpool())
+    console.log(calculaPesoSpoolDeriv())
+  
+    
 }
