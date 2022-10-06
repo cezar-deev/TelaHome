@@ -1,8 +1,36 @@
 
                           
-                          // <<<<<<<<<<<  CALCULOS DE MATERIAL - TUBO >>>>>>>>>>> //
+// ---------------------  CALCULOS DE MATERIAL - TUBO --------------------- //
+
+function calcPesoMilimetro(peso,comprimento) {
+    var pesoMM = parseFloat(peso) / parseFloat(comprimento);
+    if(comprimento<1){
+        alert("Comprimento nao pode ser menor que 1mm ")
+    } if (peso=0){
+        alert("Peso não pode ser menor ou igual a zero ")
+    }
+    return pesoMM
+} 
 
 
+function tuboPrincipal() {
+    var comprimento1 = document.getElementById('comp1').value;
+    var peso1 = document.getElementById('peso1').value;
+    var resultado = calcPesoMilimetro(peso1,comprimento1).toFixed(3);
+    document.getElementById('res1').innerHTML = resultado
+    return resultado
+}
+
+function tuboDerivacao() {
+    var comprimento2 = document.getElementById('comp2').value;
+    var peso2 = document.getElementById('peso2').value;
+    var resultado = calcPesoMilimetro(peso2,comprimento2).toFixed(3);
+    document.getElementById('res2').innerHTML = resultado
+    return resultado
+}
+
+
+/* REFATORADO
 function calcPrincipal() {
     var comprimento1 = document.getElementById('comp1').value;
     var peso1 = document.getElementById('peso1').value;
@@ -33,6 +61,7 @@ function calcDerivacao () {
     document.getElementById('res2').innerHTML = total2.toFixed(3);
 }
 
+
 function calcPesoTot() {
 
     var comprimento1 = document.getElementById('comp1').value;
@@ -53,9 +82,73 @@ function calcPesoTot() {
     document.getElementById('res2').innerHTML = calculo2.toFixed(3)+" Kg";
     document.getElementById('res3', "kg").innerHTML = total.toFixed(3)+" Kg";         
 }
+*/
 
 
-                          // <<  CALCULOS DE MATERIAL - CONEXÃO >> //
+// ---------------------  CALCULOS DE MATERIAL - CONEXÃO --------------------- //
+
+    function calcPesoMaterail(peso,quantidade) {
+        if (quantidade=="" || peso==""){
+            var calculo = 0;
+        } else {  
+                calculo = parseFloat(peso) / parseInt(quantidade);
+        }  
+        return calculo    
+    }
+
+    function PesoConexao_1() {
+        var quantidade = document.getElementById('comp1-conexao').value;
+        var peso = document.getElementById('peso1-conexao').value;
+        var resultado = calcPesoMaterail(peso,quantidade).toFixed(1);
+        document.getElementById('res1-conexao').innerHTML = resultado;
+        return resultado;
+    }
+
+    function PesoConexao_2() {
+        var quantidade = document.getElementById('comp2-conexao').value;
+        var peso = document.getElementById('peso2-conexao').value;
+        var resultado = calcPesoMaterail(peso,quantidade).toFixed(1);
+        document.getElementById('res2-conexao').innerHTML = resultado;
+        return resultado;
+    }
+
+    function PesoConexao_3() {
+        var quantidade = document.getElementById('comp3-conexao').value;
+        var peso = document.getElementById('peso3-conexao').value;
+        var resultado = calcPesoMaterail(peso,quantidade).toFixed(1);
+        document.getElementById('res3-conexao').innerHTML = resultado;
+        return resultado;
+    }
+
+    function PesoConexao_4() {
+        var quantidade = document.getElementById('comp4-conexao').value;
+        var peso = document.getElementById('peso4-conexao').value;
+        var resultado = calcPesoMaterail(peso,quantidade).toFixed(1);
+        document.getElementById('res4-conexao').innerHTML = resultado;
+        return resultado;
+    }
+
+    function PesoConexao_5() {
+        var quantidade = document.getElementById('comp5-conexao').value;
+        var peso = document.getElementById('peso5-conexao').value;
+        var resultado = calcPesoMaterail(peso,quantidade).toFixed(1);
+        document.getElementById('res5-conexao').innerHTML = resultado;
+        return resultado;
+    }
+
+    function calcConexaoTotal() {
+
+    PesoConexao_1()
+    PesoConexao_2()
+    PesoConexao_3()
+    PesoConexao_4()
+    PesoConexao_5()
+
+    }
+
+
+
+
 
 function calculaConecaoTodas () {
 
@@ -74,7 +167,7 @@ function calculaConecaoTodas () {
             document.getElementById('res1-conexao').innerHTML = 0;
         } else {  
                 var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-                document.getElementById('res1-conexao').innerHTML = calculo.toFixed(1);
+                calculaConecaoTodas () = calculo.toFixed(1);
             }    
     }
 
