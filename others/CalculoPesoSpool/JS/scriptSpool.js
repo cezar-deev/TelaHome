@@ -2,6 +2,11 @@
                           
 // ---------------------  CALCULOS DE MATERIAL - TUBO --------------------- //
 
+const compInput1 = document.getElementById('comp1');
+const pesoInput1 = document.getElementById('peso1');
+const resultElement1 = document.getElementById('res1');
+
+
 function calcPesoMilimetro(peso,comprimento) {
     var pesoMM = parseFloat(peso) / parseFloat(comprimento);
     if(comprimento<1){
@@ -14,10 +19,13 @@ function calcPesoMilimetro(peso,comprimento) {
 
 
 function tuboPrincipal() {
-    var comprimento1 = document.getElementById('comp1').value;
-    var peso1 = document.getElementById('peso1').value;
-    var resultado = calcPesoMilimetro(peso1,comprimento1).toFixed(3);
-    document.getElementById('res1').innerHTML = resultado
+    //var comprimento1 = document.getElementById('comp1').value;
+    //var peso1 = document.getElementById('peso1').value;
+    //const resultado = calcPesoMilimetro(peso1,comprimento1).toFixed(3);
+    //document.getElementById('res1').innerHTML = resultado
+    //return resultado
+    const resultado = calcPesoMilimetro(pesoInput1.value,compInput1.value).toFixed(3);
+    resultElement1.innerText = resultado
     return resultado
 }
 
