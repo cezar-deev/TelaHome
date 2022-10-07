@@ -282,12 +282,12 @@ function calculaConecaoTodasSP() {
     pesoConexaoSpool_5()
 
     const pesoConexaoSpoolTotal = somaPeso(
-                                            parseFloat(pesoConexaoSpool_1()),
-                                            parseFloat(pesoConexaoSpool_2()),
-                                            parseFloat(pesoConexaoSpool_3()),
-                                            parseFloat(pesoConexaoSpool_4()),
-                                            parseFloat(pesoConexaoSpool_5())
-                                            )
+        parseFloat(pesoConexaoSpool_1()),
+        parseFloat(pesoConexaoSpool_2()),
+        parseFloat(pesoConexaoSpool_3()),
+        parseFloat(pesoConexaoSpool_4()),
+        parseFloat(pesoConexaoSpool_5())
+        )
     ConexSpoolTotalElement.innerText = pesoConexaoSpoolTotal.toFixed(1)+" kg";
     return pesoConexaoSpoolTotal
 }
