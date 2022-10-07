@@ -208,6 +208,7 @@ function PesoTuboSpoolPrincipal() {
     const resPesoSpPrincipal = pesoTuboSpool(parseFloat(compTuboSpoolPrincipal()),parseFloat(tuboPrincipal()))
     resSpPriPesoElement.innerText = resPesoSpPrincipal.toFixed(1)+" kg";
     return resPesoSpPrincipal.toFixed(3)
+    
 }
 
 // 4/4 - Calculo do Peso - Tubo Principal
