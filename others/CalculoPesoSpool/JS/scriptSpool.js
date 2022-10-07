@@ -35,15 +35,16 @@ const compSpPriInput2 = document.getElementById('item2-spool-pricnipal');
 const compSpPriInput3 = document.getElementById('item3-spool-pricnipal');
 const compSpPriInput4 = document.getElementById('item4-spool-pricnipal');
 const compSpPriInput5 = document.getElementById('item5-spool-pricnipal');
-const resSpPriElement = document.getElementById('res-tubo-comp-spool');
+const resSpPriCompElement = document.getElementById('res-tubo-comp-spool');
+const resSpPriPesoElement = document.getElementById('res-tubo-peso-spool');
 
 const compSpDerivInput1 = document.getElementById('item1-spool-derivacao');
 const compSpDerivInput2 = document.getElementById('item2-spool-derivacao');
 const compSpDerivInput3 = document.getElementById('item3-spool-derivacao');
 const compSpDerivInput4 = document.getElementById('item4-spool-derivacao');
 const compSpDerivInput5 = document.getElementById('item5-spool-derivacao');
-const resSpDerivElement = document.getElementById('res-conexao-comp-spool-d');
-
+const resSpDerivCompElement = document.getElementById('res-conexao-comp-spool-d');
+const resSpDerivPesoElement = document.getElementById('res-conexao-peso-spool-d');
 
 // FUNÇÕES
 // ---------------------  FUNÇÕES DE CALCULOS DE MATERIAL - TUBO --------------------- //
@@ -58,14 +59,14 @@ function calcPesoMilimetro(peso,comprimento) {
 } 
 
 function tuboPrincipal() {
-    const resultado = calcPesoMilimetro(pesoInput1.value,compInput1.value).toFixed(3);
-    resElement1.innerText = resultado;
+    const resultado = calcPesoMilimetro(pesoInput1.value,compInput1.value).toFixed(2);
+    resElement1.innerText = resultado+" kg";
     return resultado;
 }
 
 function tuboDerivacao() {
-    const resultado = calcPesoMilimetro(pesoInput2.value,compInput2.value).toFixed(3);
-    resElement2.innerText = resultado;
+    const resultado = calcPesoMilimetro(pesoInput2.value,compInput2.value).toFixed(2);
+    resElement2.innerText = resultado+" kg";
     return resultado;
 }
 
@@ -120,14 +121,35 @@ function PesoConecaoTotal() {
 
 // ---------------------  FUNÇÕES DE CALCULOS SPOOL -TUBOS --------------------- //
 
-function compTuboSpool(comp1,comp2,comp3,comp4,comp5) {
-
-    const compTotal = comp1 +++ comp2 +++ comp3 +++ comp4 +++ comp5
-    return compTotal
+// Nao permite digitar virgula
+function onlynumber(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode( key );
+    //var regex = /^[0-9.,]+$/;
+    var regex = /^[0-9.]+$/;
+    if( !regex.test(key) ) {
+       theEvent.returnValue = false;
+       if(theEvent.preventDefault) theEvent.preventDefault();
+    }
 }
 
-// 1/4 - Soma dos Comprimentos - Tubo Pricipal
 
+// Função de calculo dos comprimento do tubo do Spool
+function compTuboSpool(comp1,comp2,comp3,comp4,comp5) {
+    const compTotalTubo = comp1 +++ comp2 +++ comp3 +++ comp4 +++ comp5
+    return compTotalTubo
+}
+
+// Função de calculo dos peso do tubo do Spool
+function pesoTuboSpool(comp,peso) {
+    const pesoTotalTubo = comp * peso
+    return pesoTotalTubo
+}
+
+
+
+// 1/4 - Soma dos Comprimentos - Tubo Pricipal
 function compTuboSpoolPrincipal() {
     const compTotal = compTuboSpool (
         compSpPriInput1.value,
@@ -136,8 +158,35 @@ function compTuboSpoolPrincipal() {
         compSpPriInput4.value,
         compSpPriInput5.value,
     )
-    resSpPriElement.innerText = compTotal+" mm";
+    resSpPriCompElement.innerText = compTotal+" mm";
+    return compTotal    
+}
+
+// 2/4 - Soma dos Comprimentos - Tubo Derivacao
+function compTuboSpoolDerivacao() {
+    const compTotal = compTuboSpool (
+        compSpDerivInput1.value,
+        compSpDerivInput2.value,
+        compSpDerivInput3.value,
+        compSpDerivInput4.value,
+        compSpDerivInput5.value,
+    )
+    resSpDerivCompElement.innerText = compTotal+" mm";
     return compTotal;    
+}
+
+// 3/4 - Calculo do Peso - Tubo Principal
+function PesoTuboSpoolPrincipal() {
+    const resPesoSpPrincipal = pesoTuboSpool(parseFloat(compTuboSpoolPrincipal()),parseFloat(tuboPrincipal()))
+    resSpPriPesoElement.innerText = resPesoSpPrincipal.toFixed(1)+" kg";
+    return resPesoSpPrincipal.toFixed(3)
+}
+
+// 4/4 - Calculo do Peso - Tubo Principal
+function PesoTuboSpoolDerivacao() {
+    const resPesoSpDerivacao = pesoTuboSpool(parseFloat(compTuboSpoolDerivacao()),parseFloat(tuboDerivacao()))
+    resSpDerivPesoElement.innerText = resPesoSpDerivacao.toFixed(1)+" kg";
+    return resPesoSpDerivacao.toFixed(3)
 }
 
 
@@ -151,7 +200,10 @@ function compTuboSpoolPrincipal() {
 
 
 
+ 
 
+
+/* REFATORADO
 // 1/4 - Soma dos Comprimentos - Tubo Pricipal
 function calculaCompTuboSpool () {
 
@@ -166,8 +218,6 @@ function calculaCompTuboSpool () {
 
 }
 
-
-
 // 2/4 - Soma dos Comprimentos - Tubo derivacao
 function calculaCompTuboSpoolDeriv () {
 
@@ -179,9 +229,7 @@ function calculaCompTuboSpoolDeriv () {
     
     var compTotal = compTubSp1d +++ compTubSp2d +++ compTubSp3d +++ compTubSp4d +++ compTubSp5d;
     document.getElementById('res-conexao-comp-spool-d').innerHTML = compTotal+" mm";;
-
 }
-
 
 // 3/4 - Calculo do Peso - Tubo Pricipal
 function calculaPesoTuboSpool() {
@@ -203,7 +251,6 @@ function calculaPesoTuboSpool() {
     return compTotal
 }
 
-
 // 4/4 - Calculo do Peso  - Tubo Derivação
 function calculaPesoSpoolDeriv() {
 
@@ -220,11 +267,9 @@ function calculaPesoSpoolDeriv() {
 
     resultTuboSpoolDeriv =   parseFloat(compTotal2) * parseFloat(total2)
     
-    document.getElementById('res-conexao-peso-spool').innerHTML = resultTuboSpoolDeriv.toFixed(2)+" kg";
+    document.getElementById('res-conexao-peso-spool-d').innerHTML = resultTuboSpoolDeriv.toFixed(2)+" kg";
     return compTotal2
 }
-
-
 
 // 4/4 - Botao Calcular Tubo
 function calculaCompPeso() {
@@ -241,7 +286,6 @@ function calculaCompPesoDeriv() {
     calculaPesoSpoolDeriv()
 }
 
-
 // Nao permite digitar virgula  - Tubo Pricipal
 function onlynumber(evt) {
     var theEvent = evt || window.event;
@@ -254,6 +298,8 @@ function onlynumber(evt) {
        if(theEvent.preventDefault) theEvent.preventDefault();
     }
 }
+*/
+
 
                            // >>  CALCULOS SPOOL - CONEXÕES  << //
 
