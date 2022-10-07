@@ -46,8 +46,34 @@ const compSpDerivInput5 = document.getElementById('item5-spool-derivacao');
 const resSpDerivCompElement = document.getElementById('res-conexao-comp-spool-d');
 const resSpDerivPesoElement = document.getElementById('res-conexao-peso-spool-d');
 
+const quantConexSpoolInput1 = document.getElementById('qtd1-conexaoSP');
+const pesoConexSpoolInput1 = document.getElementById('peso1-conexaoSP');
+const resConexSpoolElemnt1 = document.getElementById('res1-conexaoSP');
+
+const quantConexSpoolInput2 = document.getElementById('qtd2-conexaoSP');
+const pesoConexSpoolInput2 = document.getElementById('peso2-conexaoSP');
+const resConexSpoolElemnt2 = document.getElementById('res2-conexaoSP');
+
+const quantConexSpoolInput3 = document.getElementById('qtd3-conexaoSP');
+const pesoConexSpoolInput3 = document.getElementById('peso3-conexaoSP');
+const resConexSpoolElemnt3 = document.getElementById('res3-conexaoSP');
+
+const quantConexSpoolInput4 = document.getElementById('qtd4-conexaoSP');
+const pesoConexSpoolInput4 = document.getElementById('peso4-conexaoSP');
+const resConexSpoolElemnt4 = document.getElementById('res4-conexaoSP');
+
+const quantConexSpoolInput5 = document.getElementById('qtd5-conexaoSP');
+const pesoConexSpoolInput5 = document.getElementById('peso5-conexaoSP');
+const resConexSpoolElemnt5 = document.getElementById('res5-conexaoSP');
+
+const ConexSpoolTotalElement = document.getElementById('peso-conexaoSP-total');
+
+
+
+
 // FUNÇÕES
-// ---------------------  FUNÇÕES DE CALCULOS DE MATERIAL - TUBO --------------------- //
+// ---------------------  MATERIAL - TUBO --------------------- //
+
 function calcPesoMilimetro(peso,comprimento) {
     var pesoMM = parseFloat(peso) / parseFloat(comprimento);
     if(comprimento<1){
@@ -70,7 +96,7 @@ function tuboDerivacao() {
     return resultado;
 }
 
-// ---------------------  FUNÇÕES DE MATERIAL - CONEXÃO --------------------- //
+// ---------------------  MATERIAL - CONEXÃO --------------------- //
 
 function calcPesoMaterail(peso,quantidade) {
     if (quantidade=="" || peso==""){
@@ -119,7 +145,7 @@ function PesoConecaoTotal() {
     PesoConexao_5 ()
 }
 
-// ---------------------  FUNÇÕES DE CALCULOS SPOOL -TUBOS --------------------- //
+// ---------------------  SPOOL - TUBO --------------------- //
 
 // Nao permite digitar virgula
 function onlynumber(evt) {
@@ -190,210 +216,86 @@ function PesoTuboSpoolDerivacao() {
 }
 
 
+// ---------------------  SPOOL - CONEXÃO --------------------- //
 
 
 
+function pesoConexaoSpool(pesoConexao,qtdConexao) {
+    var resPesoConexSpool = 0;
 
+    if (pesoConexao=="" || qtdConexao==""){
+        resPesoConexSpool = 0;
 
-
-
-
-
-
- 
-
-
-/* REFATORADO
-// 1/4 - Soma dos Comprimentos - Tubo Pricipal
-function calculaCompTuboSpool () {
-
-    var compTubSp1 = document.getElementById('item1-spool-pricnipal').value;
-    var compTubSp2 = document.getElementById('item2-spool-pricnipal').value;
-    var compTubSp3 = document.getElementById('item3-spool-pricnipal').value;
-    var compTubSp4 = document.getElementById('item4-spool-pricnipal').value;
-    var compTubSp5 = document.getElementById('item5-spool-pricnipal').value;
-    
-    var compTotal = compTubSp1 +++ compTubSp2 +++ compTubSp3 +++ compTubSp4 +++ compTubSp5;
-    document.getElementById('res-tubo-comp-spool').innerHTML = compTotal+" mm";
-
+    }   else {  
+            resPesoConexSpool = parseFloat(pesoConexao) / parseInt(qtdConexao);
+        } 
+    return resPesoConexSpool 
 }
 
-// 2/4 - Soma dos Comprimentos - Tubo derivacao
-function calculaCompTuboSpoolDeriv () {
 
-    var compTubSp1d = document.getElementById('item1-spool-derivacao').value;
-    var compTubSp2d = document.getElementById('item2-spool-derivacao').value;
-    var compTubSp3d = document.getElementById('item3-spool-derivacao').value;
-    var compTubSp4d = document.getElementById('item4-spool-derivacao').value;
-    var compTubSp5d = document.getElementById('item5-spool-derivacao').value;
-    
-    var compTotal = compTubSp1d +++ compTubSp2d +++ compTubSp3d +++ compTubSp4d +++ compTubSp5d;
-    document.getElementById('res-conexao-comp-spool-d').innerHTML = compTotal+" mm";;
+function pesoConexaoSpool_1() {
+
+    const resultado = pesoConexaoSpool (pesoConexSpoolInput1.value,quantConexSpoolInput1.value)
+    resConexSpoolElemnt1.innerText = resultado.toFixed(1);
+    return resultado.toFixed(1);
 }
 
-// 3/4 - Calculo do Peso - Tubo Pricipal
-function calculaPesoTuboSpool() {
+function pesoConexaoSpool_2() {
 
-    var comprimento1 = document.getElementById('comp1').value;
-    var peso1 = document.getElementById('peso1').value;
-    var total1 = parseFloat(peso1) / parseFloat(comprimento1);
-
-    var compTubSp1 = document.getElementById('item1-spool-pricnipal').value;
-    var compTubSp2 = document.getElementById('item2-spool-pricnipal').value;
-    var compTubSp3 = document.getElementById('item3-spool-pricnipal').value;
-    var compTubSp4 = document.getElementById('item4-spool-pricnipal').value;
-    var compTubSp5 = document.getElementById('item5-spool-pricnipal').value;
-
-    var compTotal = compTubSp1 +++ compTubSp2 +++ compTubSp3 +++ compTubSp4 +++ compTubSp5;
-    resultTuboSpoolP =   parseFloat(compTotal) * parseFloat(total1)
-
-    document.getElementById('res-tubo-peso-spool').innerHTML = resultTuboSpoolP.toFixed(2)+" kg";
-    return compTotal
+    const resultado = pesoConexaoSpool (pesoConexSpoolInput2.value,quantConexSpoolInput2.value)
+    resConexSpoolElemnt2.innerText = resultado.toFixed(1);
+    return resultado.toFixed(1);
 }
 
-// 4/4 - Calculo do Peso  - Tubo Derivação
-function calculaPesoSpoolDeriv() {
+function pesoConexaoSpool_3() {
 
-    var comprimento2 = document.getElementById('comp2').value;
-    var peso2 = document.getElementById('peso2').value;
-    var total2 = parseFloat(peso2)/parseFloat(comprimento2);
-
-    var compTubSp1d = document.getElementById('item1-spool-derivacao').value;
-    var compTubSp2d = document.getElementById('item2-spool-derivacao').value;
-    var compTubSp3d = document.getElementById('item3-spool-derivacao').value;
-    var compTubSp4d = document.getElementById('item4-spool-derivacao').value;
-    var compTubSp5d = document.getElementById('item5-spool-derivacao').value;
-    var compTotal2 = compTubSp1d +++ compTubSp2d +++ compTubSp3d +++ compTubSp4d +++ compTubSp5d;
-
-    resultTuboSpoolDeriv =   parseFloat(compTotal2) * parseFloat(total2)
-    
-    document.getElementById('res-conexao-peso-spool-d').innerHTML = resultTuboSpoolDeriv.toFixed(2)+" kg";
-    return compTotal2
+    const resultado = pesoConexaoSpool (pesoConexSpoolInput3.value,quantConexSpoolInput3.value)
+    resConexSpoolElemnt3.innerText = resultado.toFixed(1);
+    return resultado.toFixed(1);
 }
 
-// 4/4 - Botao Calcular Tubo
-function calculaCompPeso() {
+function pesoConexaoSpool_4() {
 
-    calculaCompTuboSpool()
-    calculaPesoTuboSpool()
-    PesoSpoolFinal () 
+    const resultado = pesoConexaoSpool (pesoConexSpoolInput4.value,quantConexSpoolInput4.value)
+    resConexSpoolElemnt4.innerText = resultado.toFixed(1);
+    return resultado.toFixed(1);
 }
 
-// 4/4 - Botao Calcular Derivacao
-function calculaCompPesoDeriv() {
+function pesoConexaoSpool_5() {
 
-    calculaCompTuboSpoolDeriv()
-    calculaPesoSpoolDeriv()
+    const resultado = pesoConexaoSpool (pesoConexSpoolInput5.value,quantConexSpoolInput5.value)
+    resConexSpoolElemnt5.innerText = resultado.toFixed(1);
+    return resultado.toFixed(1);
 }
 
-// Nao permite digitar virgula  - Tubo Pricipal
-function onlynumber(evt) {
-    var theEvent = evt || window.event;
-    var key = theEvent.keyCode || theEvent.which;
-    key = String.fromCharCode( key );
-    //var regex = /^[0-9.,]+$/;
-    var regex = /^[0-9.]+$/;
-    if( !regex.test(key) ) {
-       theEvent.returnValue = false;
-       if(theEvent.preventDefault) theEvent.preventDefault();
-    }
+function somaPeso(peso1,peso2,peso3,peso4,peso5) {
+    resultado = (peso1 +++ peso2 +++ peso3 +++ peso4 +++ peso5)
+return resultado
 }
-*/
-
-
-                           // >>  CALCULOS SPOOL - CONEXÕES  << //
-
 
 function calculaConecaoTodasSP() {
 
-    calcPesoConexaoSP_1 ()
-    calcPesoConexaoSP_2 ()
-    calcPesoConexaoSP_3 ()
-    calcPesoConexaoSP_4 ()
-    calcPesoConexaoSP_5 ()
-    calculaCompTuboSpool ()
+    pesoConexaoSpool_1()
+    pesoConexaoSpool_2()
+    pesoConexaoSpool_3()
+    pesoConexaoSpool_4()
+    pesoConexaoSpool_5()
 
-    function calcPesoConexaoSP_1 () {
-
-        var quantidadeConexao = document.getElementById('qtd1-conexaoSP').value;
-        var pesoConexao = document.getElementById('peso1-conexaoSP').value;
-
-        if (quantidadeConexao=="" || pesoConexao==""){
-            document.getElementById('res1-conexaoSP').innerHTML = 0;
-        } else {  
-                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-                document.getElementById('res1-conexaoSP').innerHTML = calculo.toFixed(1);
-            }    
-    }
-
-    function calcPesoConexaoSP_2 () {
-
-        var quantidadeConexao = document.getElementById('qtd2-conexaoSP').value;
-        var pesoConexao = document.getElementById('peso2-conexaoSP').value;
-
-        if (quantidadeConexao=="" || pesoConexao==""){
-            document.getElementById('res2-conexaoSP').innerHTML = 0;
-        } else {  
-                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-                document.getElementById('res2-conexaoSP').innerHTML = calculo.toFixed(2);
-            }    
-    }
-
-    function calcPesoConexaoSP_3 () {
-
-        var quantidadeConexao = document.getElementById('qtd3-conexaoSP').value;
-        var pesoConexao = document.getElementById('peso3-conexaoSP').value;
-
-        if (quantidadeConexao=="" || pesoConexao==""){
-            document.getElementById('res3-conexaoSP').innerHTML = 0;
-        } else {  
-                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-                document.getElementById('res3-conexaoSP').innerHTML = calculo.toFixed(2);
-            }    
-    }
-
-    function calcPesoConexaoSP_4 () {
-
-        var quantidadeConexao = document.getElementById('qtd4-conexaoSP').value;
-        var pesoConexao = document.getElementById('peso4-conexaoSP').value;
-
-        if (quantidadeConexao=="" || pesoConexao==""){
-            document.getElementById('res4-conexaoSP').innerHTML = 0;
-        } else {  
-                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-                document.getElementById('res4-conexaoSP').innerHTML = calculo.toFixed(2);
-            }    
-    }
-
-
-    function calcPesoConexaoSP_5 () {
-
-        var quantidadeConexao = document.getElementById('qtd5-conexaoSP').value;
-        var pesoConexao = document.getElementById('peso5-conexaoSP').value;
-
-        if (quantidadeConexao=="" || pesoConexao==""){
-            document.getElementById('res5-conexaoSP').innerHTML = 0;
-        } else {  
-                var calculo = parseFloat(pesoConexao) / parseInt(quantidadeConexao);
-                document.getElementById('res5-conexaoSP').innerHTML = calculo.toFixed(2);
-            }    
-    }
-
-    function calculaCompTuboSpool () {
-
-        var qtdConexaoSp1 = document.getElementById('qtd1-conexaoSP').value;
-        var qtdConexaoSp2 = document.getElementById('qtd2-conexaoSP').value;
-        var qtdConexaoSp3 = document.getElementById('qtd3-conexaoSP').value;
-        var qtdConexaoSp4 = document.getElementById('qtd4-conexaoSP').value;
-        var qtdConexaoSp5 = document.getElementById('qtd5-conexaoSP').value;
-        
-        var compTotal = qtdConexaoSp1 +++ qtdConexaoSp2 +++ qtdConexaoSp3 +++ qtdConexaoSp4 +++ qtdConexaoSp5;
-        document.getElementById('res-qtd-conexao-spool').innerHTML = compTotal;
-    
-    
-    }
-
+    const pesoConexaoSpoolTotal = somaPeso(
+                                            parseFloat(pesoConexaoSpool_1()),
+                                            parseFloat(pesoConexaoSpool_2()),
+                                            parseFloat(pesoConexaoSpool_3()),
+                                            parseFloat(pesoConexaoSpool_4()),
+                                            parseFloat(pesoConexaoSpool_5())
+                                            )
+    ConexSpoolTotalElement.innerText = pesoConexaoSpoolTotal.toFixed(1)+" kg";
+    return pesoConexaoSpoolTotal
 }
+
+
+
+// ---------------------  SPOOL - CONEXÃO --------------------- //
+
 
 function PesoSpoolFinal () {
 
