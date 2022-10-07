@@ -68,6 +68,8 @@ const resConexSpoolElemnt5 = document.getElementById('res5-conexaoSP');
 
 const ConexSpoolTotalElement = document.getElementById('peso-conexaoSP-total');
 
+const pesoTuboFinalElement = document.getElementById('peso-tubo-final');
+
 
 
 
@@ -280,6 +282,7 @@ function calculaConecaoTodasSP() {
     pesoConexaoSpool_3()
     pesoConexaoSpool_4()
     pesoConexaoSpool_5()
+    pesoTuboFinal ()
 
     const pesoConexaoSpoolTotal = somaPeso(
         parseFloat(pesoConexaoSpool_1()),
@@ -289,18 +292,25 @@ function calculaConecaoTodasSP() {
         parseFloat(pesoConexaoSpool_5())
         )
     ConexSpoolTotalElement.innerText = pesoConexaoSpoolTotal.toFixed(1)+" kg";
-    return pesoConexaoSpoolTotal
+    return pesoConexaoSpoolTotal;   
+
 }
 
-
-
-// ---------------------  SPOOL - CONEXÃO --------------------- //
-
-
-function PesoSpoolFinal () {
-
-    console.log(calculaPesoTuboSpool())
-    console.log(calculaPesoSpoolDeriv())
-  
-    
+function calcPesoTuboFinal (pesoPrincipal,pesoDerivacao) {
+    const pesoTuboFinal = pesoPrincipal +++ pesoDerivacao
+    return pesoTuboFinal
 }
+
+function pesoTuboFinal () {
+
+    const resultado = calcPesoTuboFinal (
+        parseFloat(PesoTuboSpoolPrincipal()),
+        parseFloat(PesoTuboSpoolDerivacao())
+    )
+    pesoTuboFinalElement.innerText = resultado.toFixed(1)+" kg"; 
+} 
+
+
+
+
+
