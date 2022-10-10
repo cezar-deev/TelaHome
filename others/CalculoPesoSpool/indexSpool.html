@@ -36,13 +36,13 @@
                         <h4 class="item" >Principal:</h4>
                         <input type="text" id="comp1" class="item" placeholder="mm" maxlength="5">
                         <input type="text" id="peso1" class="item" placeholder="kg" maxlength="5">
-                        <div type="float" id="res1" class="item"></div>
+                        <div type="float" id="res1" class="item">-</div>
                     </form>
                     <form class="table-itens">
                         <h4 class="item" >Derivação: </h4>
                         <input type="text" id="comp2" class="item" placeholder="mm" maxlength="5">
                         <input type="text" id="peso2" class="item" placeholder="kg" maxlength="5">
-                        <div id="res2" class="item" maxlength="5">0</div>
+                        <div id="res2" class="item" maxlength="5">-</div>
                     </form>
 
                     <!--form id="table-itens-total" class="table-itens">
@@ -280,43 +280,43 @@
                         <h4 class="item-conexao">Item 1</h4>
                         <input id="qtd1-conexaoSP" type="text" class="item-conexao" placeholder=" Qtd" maxlength="2">
                         <input id="peso1-conexaoSP" type="text" class="item-conexao" placeholder=" Kg" maxlength="6">
-                        <div id="res1-conexaoSP" class="item-conexao">0</div>
+                        <div id="res1-conexaoSP" class="item-conexao">-</div>
                     </form>
                     <form class="table-itens-conexao">
                         <h4 class="item-conexao">Item 2</h4>
                         <input id="qtd2-conexaoSP" type="text" class="item-conexao" placeholder=" Qtd" maxlength="2">
                         <input id="peso2-conexaoSP" type="text" class="item-conexao" placeholder=" Kg" maxlength="6">
-                        <div id="res2-conexaoSP" class="item-conexao">0</div>
+                        <div id="res2-conexaoSP" class="item-conexao">-</div>
                     </form>
                     <form class="table-itens-conexao">
                         <h4 class="item-conexao">Item 3</h4>
                         <input id="qtd3-conexaoSP" type="text" class="item-conexao" placeholder=" Qtd" maxlength="2">
                         <input id="peso3-conexaoSP" type="text" class="item-conexao" placeholder=" Kg" maxlength="6">
-                        <div id="res3-conexaoSP" class="item-conexao">0</div>
+                        <div id="res3-conexaoSP" class="item-conexao">-</div>
                     </form>
                     <form class="table-itens-conexao">
                         <h4 class="item-conexao">Item 4</h4>
                         <input id="qtd4-conexaoSP" type="text" class="item-conexao" placeholder=" Qtd" maxlength="2">
                         <input id="peso4-conexaoSP" type="text" class="item-conexao" placeholder=" Kg" maxlength="6">
-                        <div id="res4-conexaoSP" class="item-conexao">0</div>
+                        <div id="res4-conexaoSP" class="item-conexao">-</div>
                     </form>
                     <form class="table-itens-conexao">
                         <h4 class="item-conexao">Item 5</h4>
                         <input id="qtd5-conexaoSP" type="text" class="item-conexao" placeholder=" Qtd" maxlength="2">
                         <input id="peso5-conexaoSP" type="text" class="item-conexao" placeholder=" Kg" maxlength="6">
-                        <div id="res5-conexaoSP" class="item-conexao">0</div>
+                        <div id="res5-conexaoSP" class="item-conexao">-</div>
                     </div>
                     <div class="table-itens-conexao">
                         <!--h4>Qtd Total:</h4-->
-                        <!--div type="float" id="res-qtd-conexao-spool" class="item-conexao">0</div!-->
+                        <!--div type="float" id="res-qtd-conexao-spool" class="item-conexao">-</div!-->
                     </form>
                     <form class="table-itens-conexao">
                         <h4>Peso Total:</h4>
-                        <div type="float" id="peso-conexaoSP-total" class="item-conexao">0</div>
+                        <div type="float" id="peso-conexaoSP-total" class="item-conexao">-</div>
                     </form>    
                 </div>
                     <div id="container-btn-conexao-spool">
-                        <button onclick="calculaConecaoTodasSP()">Calcular</button>
+                        <button onclick="pesoConexaoSpoolTotal()">Calcular</button>
                     </div>
             </div>
         </div >
@@ -330,19 +330,19 @@
                 <div>
                     <h4>Tubo</h4>
                     <input type="text">
-                    <div id="peso-tubo-final" class="resultado-final">0</div>
+                    <div id="peso-tubo-final" class="resultado-final">-</div>
                 </div>
 
                 <div>
                     <h4>Conexão</h4>
                     <input type="text">
-                    <div id="peso-conexao-final" class="resultado-final">0</div>
+                    <div id="peso-conexao-final" class="resultado-final">-</div>
                 </div>
 
                 <div>
                     <h4>Spool</h4>
                     <input type="text">
-                    <div id="peso-spool-final" class="resultado-final">0</div>
+                    <div id="peso-spool-final" class="resultado-final">-</div>
                 </div>
             </div>
             
