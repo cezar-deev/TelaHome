@@ -333,4 +333,6 @@ button:hover {
 #voltar {
     text-decoration: none;
     color: #fff;
+    font-size:20px;
+    font-weight: bold;
 }
