@@ -80,12 +80,9 @@ const pesoSpoolFinalElement = document.getElementById('peso-spool-final');
 
 function calcPesoMilimetro(peso,comprimento) {
     var pesoMM = parseFloat(peso) / parseFloat(comprimento);
-    /*if(comprimento<1){
-        alert("Comprimento nao pode ser menor que 1mm ")
-    } if (peso=0){
-        alert("Peso não pode ser menor ou igual a zero ")
-    }*/
-    return pesoMM;
+    if(comprimento = "" | peso == ""){
+        return 0
+    } else return pesoMM;
 } 
 
 function tuboPrincipal() {
@@ -100,7 +97,10 @@ function tuboDerivacao() {
     return resultado;
 }
 
-
+function btnCalcularTubos() {
+    tuboPrincipal()
+    tuboDerivacao()     
+}
 
 // ---------------------  MATERIAL - CONEXÃO --------------------- //
 
@@ -319,14 +319,22 @@ return resultado
 
 }
 
+function exibir () {
+    var resultado = parseFloat(pesoTuboFinal())
+    if ( resultado > 0) {
+        pesoSpoolFinal()
+    }
+    console.logo(resultado)
+}
 
 // Peso Final do Spool
 function pesoSpoolFinal() {
     var pesoTubo = parseFloat(pesoTuboFinal());
     var pesoConexao = parseFloat(pesoConexaoSpoolTotal());
     var resultado = pesoTubo +++ pesoConexao
-    pesoSpoolFinalElement.innerText = resultado+" kg";  
+    pesoSpoolFinalElement.innerText = resultado.toFixed(1)+" kg";  
 } 
+
 
 
 
