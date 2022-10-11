@@ -223,6 +223,8 @@ function PesoTuboSpoolDerivacao() {
 }
 
 
+
+
 // ---------------------  SPOOL - CONEXÃO --------------------- //
 
 //Calcula Peso Concexão - Regra
@@ -287,8 +289,19 @@ function pesoConexaoSpoolTotal() {
     return resultado;   
 }
 
+function btnCalculoFinal() {
+    btnCalcularTubos()
+    PesoConecaoTotal()
+    
+    PesoTuboSpoolPrincipal()
+    PesoTuboSpoolDerivacao()
 
+    pesoConexaoSpoolTotal()
+    pesoTuboFinal()
+    
+    pesoSpoolFinal()
 
+}
 
 // ---------------------  SPOOL - FINAL --------------------- //
 
