@@ -215,6 +215,7 @@ button {
     padding: .7rem;
     width: 200px;
     border:none;
+    border-radius: 5px;
     font-size: 15px;
     opacity: 0.8;
     cursor: pointer;
