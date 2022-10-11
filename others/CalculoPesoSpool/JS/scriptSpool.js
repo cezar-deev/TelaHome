@@ -298,7 +298,7 @@ function btnCalculoFinal() {
 
     pesoConexaoSpoolTotal()
     pesoTuboFinal()
-    
+
     pesoSpoolFinal()
 
 }
@@ -350,5 +350,22 @@ function pesoSpoolFinal() {
 
 
 
+// ------------------------- EVENTOS --------------------- //
 
+// evento de mouseover :  É ativado quando o mouse passar em cima do elemento que criamos no evento;
+var title = document.getElementById('comp1');
+
+title.addEventListener("mouseover", function() { // É passado uma callBack aqui
+
+  this.style.backgroundColor = "yellow";
+
+});
+
+
+// evento de mouseout :  É ativado quando o mouse sai cima do elemento que criamos no evento;
+title.addEventListener("mouseout", function() { // É passado uma callBack aqui
+
+  this.style.backgroundColor = "white";
+
+});
 

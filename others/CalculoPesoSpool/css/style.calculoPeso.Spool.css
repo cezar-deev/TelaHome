@@ -209,13 +209,10 @@
 button {
     color: #fff;
     background-color: #5c5f69;
-    margin-top: .5rem;
-    margin-left: .3rem;
-    margin-right: .3rem;
     padding: .7rem;
-    width: 200px;
+    width: 300px;
     border:none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 15px;
     opacity: 0.8;
     cursor: pointer;
@@ -346,3 +343,8 @@ button:hover {
 #btn-conexao-spool {
     display: none;
 }  
+
+
+
+
+
