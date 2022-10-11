@@ -86,13 +86,13 @@ function calcPesoMilimetro(peso,comprimento) {
 } 
 
 function tuboPrincipal() {
-    const resultado = calcPesoMilimetro(pesoInput1.value,compInput1.value).toFixed(2);
+    const resultado = calcPesoMilimetro(pesoInput1.value,compInput1.value).toFixed(4);
     resElement1.innerText = resultado+" kg";
     return resultado;
 }
 
 function tuboDerivacao() {
-    const resultado = calcPesoMilimetro(pesoInput2.value,compInput2.value).toFixed(2);
+    const resultado = calcPesoMilimetro(pesoInput2.value,compInput2.value).toFixed(4);
     resElement2.innerText = resultado+" kg";
     return resultado;
 }
