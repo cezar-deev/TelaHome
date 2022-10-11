@@ -357,7 +357,7 @@ var title = document.getElementById('comp1');
 
 title.addEventListener("mouseover", function() { // É passado uma callBack aqui
 
-  this.style.backgroundColor = "yellow";
+  this.style.backgroundColor = "#F0FFF0";
 
 });
 
@@ -365,7 +365,9 @@ title.addEventListener("mouseover", function() { // É passado uma callBack aqui
 // evento de mouseout :  É ativado quando o mouse sai cima do elemento que criamos no evento;
 title.addEventListener("mouseout", function() { // É passado uma callBack aqui
 
-  this.style.backgroundColor = "white";
+  this.style.backgroundColor = "#FFE4E1";
 
 });
+
+
 
