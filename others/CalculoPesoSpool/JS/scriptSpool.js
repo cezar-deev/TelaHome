@@ -352,7 +352,13 @@ function pesoSpoolFinal() {
 
 // ------------------------- EVENTOS --------------------- //
 
+  // Keyup : mais usado pois ele executa somente uma vez
+document.addEventListener("keyup", function(e) { // posso usaro ( e ) tambem
 
+    if(e.key === "Enter") {
+      btnCalculoFinal()
+    }
+  })
 
 
 
