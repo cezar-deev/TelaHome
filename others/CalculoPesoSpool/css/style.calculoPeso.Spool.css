@@ -101,7 +101,8 @@ input:hover {
 .table-header {
     display:flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+      
 }
 
 .table-header h4 {
@@ -111,6 +112,7 @@ input:hover {
     padding: .6rem;
     text-align: center;
     font-size:15px;
+    width: 95px;
     
 }
 
@@ -195,7 +197,7 @@ input:hover {
 }
 
 .table-itens-total h4 {
-    margin: 1.5rem;
+    margin: 1.4rem;
     text-align: center;
 }
 
