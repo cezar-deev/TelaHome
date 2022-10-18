@@ -311,8 +311,6 @@ function calcPesoTuboFinal (pesoPrincipal,pesoDerivacao) {
     const pesoTuboFinal = pesoPrincipal +++ pesoDerivacao
 return pesoTuboFinal
 }
-
-
 //Peso Final do Tubo
 function pesoTuboFinal() {
     const resultado = calcPesoTuboFinal (
