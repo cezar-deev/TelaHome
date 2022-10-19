@@ -308,6 +308,27 @@ button:hover {
     text-align: center;
 }
 
+.link-materiais{
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.link {
+    color: #fff;
+    background-color: #5c5f69;
+    margin-left: .3rem;
+    margin-right: .3rem;
+    padding: .7rem;
+    width: 300px;
+    font-size: 15px;
+    opacity: 0.8;
+    cursor: pointer;
+    
+}
 
 
 
