@@ -17,15 +17,15 @@
 
     <div class="container-geral">
         <div class="container-titulo">
-            <H2 id="titulo-material">CÁLCULO DE MATERIAL</H2>
-            <H2 id="titulo-conexao">SPOOL</H2>
+            <H2 id="titulo-material">CÁLCULO DE PESO SPOOL</H2>
+            
         </div>
         
        <div class="container-material-spool">
             <!-- MATERIAL - TUBO-->    
             <div class="container-tubo">
-                <h2>TUBO</h2>
-                <h3>Calcular peso do tubo por milímetro</h3>
+                <h2>ETAPA 1 - TUBO</h2>
+                <h3>Calcular peso em Milímetro</h3>
                     <div class="table-header">
                         <h4>Tipo</h4>
                         <h4>Comp</h4>
@@ -58,8 +58,8 @@
             </div>
             <!-- MATERIAL - CONEXÃO-->
             <div class="container-conexao">
-                <h2>CONEXÃO</h2>
-                <h3>Calcular peso do material - Unidade</h3>
+                <h2>ETAPA 2 - CONEXÃO</h2>
+                <h3>Calcular Peso por Unidade</h3>
                 <div class="table-header">
                     <h4>Itens</h4>
                     <h4>Tipo</h4>
@@ -164,16 +164,16 @@
             <!-- SPOOL - TUBOS-->
             <div class="container-tubos-spool">
                 <div class="tubo-spool-principal">
-                    <h2 id="tubo-spool-titulo1">TUBO PRINCIPAL</h2>
-                    <h4 id="tubo-spool-titulo2">Comp do Tubo</h4>
+                    <h2 id="tubo-spool-titulo1">ETAPA 3 - SPOOL</h2>
+                    <h4 id="tubo-spool-titulo2">Tubo Principal</h4>
                         <div>
                             <div class="table-header-spool">
-                                <h4 >Item</h4>
-                                <h4 >Comprim</h4>
+                                <h4 >Tubos</h4>
+                                <h4 title="Comprimento em mm dos tubos do spool" >Comprim</h4>
                             </div>
 
                             <form class="table-itens-spool">
-                                <h4 class="item-spool">Item 1</h4>
+                                <h4 class="item-spool">Tubo 1</h4>
                                 <input 
                                     id="item1-spool-pricnipal" 
                                     class="item-spool" 
@@ -184,7 +184,7 @@
                                 >
                             </form>
                             <form class="table-itens-spool">
-                                <h4 class="item-spool">Item 2</h4>
+                                <h4 class="item-spool">Tubo 2</h4>
                                 <input 
                                     id="item2-spool-pricnipal" 
                                     class="item-spool" 
@@ -195,7 +195,7 @@
                                 >
                             </form>
                             <form class="table-itens-spool">
-                                <h4 class="item-spool">Item 3</h4>
+                                <h4 class="item-spool">Tubo 3</h4>
                                 <input 
                                     id="item3-spool-pricnipal" 
                                     class="item-spool" 
@@ -206,7 +206,7 @@
                                 >
                             </form>
                             <form class="table-itens-spool">
-                                <h4 class="item-spool">Item 4</h4>
+                                <h4 class="item-spool">Tubo 4</h4>
                                 <input 
                                     id="item4-spool-pricnipal" 
                                     class="item-spool" 
@@ -217,7 +217,7 @@
                                 >
                             </form>
                             <form class="table-itens-spool">
-                                <h4 class="item-spool">Item 5</h4>
+                                <h4 class="item-spool">Tubo 5</h4>
                                 <input 
                                     id="item5-spool-pricnipal" 
                                     class="item-spool" 
@@ -228,12 +228,12 @@
                                 >
                             </form>
                             <form class="table-itens-spool">
-                                <h4 class="item-spool">Comp:</h4>
+                                <h4 class="item-spool" title="Comprimento total Tubo Principal">Comp Total:</h4>
                                 <div type="float" id="res-tubo-comp-spool" class="item-conexao">-</div>
                                 
                             </form>
                             <form class="table-itens-spool">
-                                <h4 class="item-spool" >Peso: </h4>
+                                <h4 class="item-spool" title="Peso total Tubo Principal">Peso Total: </h4>
                                 <div type="float" id="res-tubo-peso-spool" class="item-conexao">-</div>
                                 
                             </form>    
@@ -245,15 +245,15 @@
                 </div>
 
                 <div class="tubo-spool-derivacao">
-                <h2 id="tubo-spool-titulo3" >TUBO DERIVAÇÃO</h2>
-                <h4 id="tubo-spool-titulo4" >Comp do Tubo</h4>
+                <h2 id="tubo-spool-titulo3" >ETAPA 3 - SPOOL</h2>
+                <h4 id="tubo-spool-titulo4" >Tubo Derivação</h4>
                     <div>
                         <div class="table-header-spool">
-                            <h4>Item</h4>
-                            <h4>Comprim</h4>
+                            <h4>Tubos</h4>
+                            <h4 title="Comprimento em mm dos tubos do spool">Comprim</h4>
                         </div>
                         <form class="table-itens-spool">
-                            <h4 class="item-spool">Item 1</h4>
+                            <h4 class="item-spool" >Tubo 1</h4>
                             <input
                                 id="item1-spool-derivacao"  
                                 class="item-spool" 
@@ -264,7 +264,7 @@
                             >
                         </form>
                         <form class="table-itens-spool">
-                            <h4 class="item-spool">Item 2</h4>
+                            <h4 class="item-spool" >Tubo 2</h4>
                             <input
                                 id="item2-spool-derivacao"   
                                 class="item-spool" 
@@ -275,7 +275,7 @@
                             >
                         </form>
                         <form class="table-itens-spool">
-                            <h4 class="item-spool">Item 3</h4>
+                            <h4 class="item-spool" >Tubo 3</h4>
                             <input
                             id="item3-spool-derivacao"   
                                 class="item-spool"
@@ -286,7 +286,7 @@
                             >
                         </form>
                         <form class="table-itens-spool">
-                            <h4 class="item-spool">Item 4</h4>
+                            <h4 class="item-spool" >Tubo 4</h4>
                             <input
                             id="item4-spool-derivacao"   
                                 class="item-spool" 
@@ -297,7 +297,7 @@
                             >
                         </form>
                         <form class="table-itens-spool">
-                            <h4 class="item-spool">Item 5</h4>
+                            <h4 class="item-spool" >Tubo 5</h4>
                             <input
                                 id="item5-spool-derivacao"   
                                 class="item-spool"
@@ -308,12 +308,12 @@
                             >
                         </form>
                         <form class="table-itens-spool">
-                            <h4 class="item-spool">Comp:</h4>
+                            <h4 class="item-spool" title="Comprimento total Tubo Derivação">Comp Total:</h4>
                             <div type="float" id="res-conexao-comp-spool-d" class="item-conexao">-</div>
                            
                         </form>
                         <form class="table-itens-spool">
-                            <h4 class="item-spool">Peso:</h4>
+                            <h4 class="item-spool" title="Peso total Tubo Derivação">Peso Total:</h4>
                             <div type="float" id="res-conexao-peso-spool-d" class="item-conexao">-</div>
                             
                         </form>    
