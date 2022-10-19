@@ -308,13 +308,15 @@ button:hover {
     text-align: center;
 }
 
-.link-materiais{
-    
+/* BOTÕES LINK */
+
+.container-link{
     margin-top: 10px;
     margin-bottom: 10px;
     display:flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    min-width: 250px;  
 }
 
 .link {
@@ -323,13 +325,17 @@ button:hover {
     margin-left: .3rem;
     margin-right: .3rem;
     padding: .7rem;
-    width: 300px;
     font-size: 15px;
     opacity: 0.8;
     cursor: pointer;
+    width: 120px;
     
 }
 
+.link:hover {
+    background-color: #383838;
+    opacity: 1.3;
+}
 
 
 /* SPOOL - PESO FINAL */
