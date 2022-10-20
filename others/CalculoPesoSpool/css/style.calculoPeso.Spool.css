@@ -38,12 +38,15 @@
     gap: 3;
 }
 
+#tag-spool {
+    margin-top: 10px;
+    height: 35px;
+}
+
 #titulo-material {
     padding-left: 100px;
      
 }
-
-
 
 .container-geral-final {
     background-color: #6675a3;

@@ -2,6 +2,8 @@
                           
 // VARIAVEIS E SELEÇAÕD DE ELEMENTOS
 
+const tagInput = document.getElementById('tag-spool');
+
 const compInput1 = document.getElementById('comp1');
 const pesoInput1 = document.getElementById('peso1');
 const resElement1 = document.getElementById('res1');
@@ -301,6 +303,7 @@ function btnCalculoFinal() {
     pesoTuboFinal()
 
     pesoSpoolFinal()
+    salvar ()
 
 }
 
@@ -328,7 +331,6 @@ function pesoTuboFinal() {
     var resultado = pesoPrincipal +++ PesoDerivacao
     pesoTuboFinalElement.innerText = resultado.toFixed(2)+" kg";
 return resultado 
-
 }
 
 function exibir () {
@@ -344,9 +346,9 @@ function pesoSpoolFinal() {
     var pesoTubo = parseFloat(pesoTuboFinal());
     var pesoConexao = parseFloat(pesoConexaoSpoolTotal());
     var resultado = pesoTubo +++ pesoConexao
-    pesoSpoolFinalElement.innerText = resultado.toFixed(2)+" kg";  
-} 
-
+    pesoSpoolFinalElement.innerText = resultado.toFixed(2)+" kg";
+return resultado.toFixed(2) 
+}    
 
 
 // ------------------------- EVENTOS --------------------- //
@@ -364,3 +366,34 @@ document.addEventListener("keyup", function(e) { // posso usaro ( e ) tambem
 btnRefresh.addEventListener("click", function() {
     location.reload();
 });
+
+
+// ------------------------ SALVANDO INFORMAÇÕES ---------------//
+
+
+var dadosSpool = {
+    id: 0,
+    spool: 0,
+    peso: 0,
+    status: false,
+}    
+
+function salvar() {
+    dadosSpool.spool = tagInput.value;
+    dadosSpool.peso = pesoSpoolFinal();
+
+    const dadosSP = JSON.stringify(dadosSpool); // recebe na var dados String/Json
+    localStorage.setItem(dadosSpool, dadosSP); // Setar ou inserir no localstorage como chave e valor
+    console.log(dadosSP)
+
+}
+
+
+function add () {
+    const title = this.form.controls['title'].value; // recebe um valor do title
+    const id = this.todos.length + 1; // pegando o id pela quantidade do todos
+    this.todos.push(new Todo(id, title, false)) // adicionando o item
+    this.save(); // Executar o metodo save()criado lá em baixo
+    this.clear(); // chamei o metodo clear , para branquaer o campo ao adicionar
+    this.changeMode('list');
+  }
