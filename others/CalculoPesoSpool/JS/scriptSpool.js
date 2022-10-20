@@ -303,7 +303,7 @@ function btnCalculoFinal() {
     pesoTuboFinal()
 
     pesoSpoolFinal()
-    salvar ()
+    salvar()
 
 }
 
@@ -375,7 +375,6 @@ var dadosSpool = {
     id: 0,
     spool: 0,
     peso: 0,
-    status: false,
 }    
 
 function salvar() {
@@ -390,10 +389,17 @@ function salvar() {
 
 
 function add () {
-    const title = this.form.controls['title'].value; // recebe um valor do title
-    const id = this.todos.length + 1; // pegando o id pela quantidade do todos
-    this.todos.push(new Todo(id, title, false)) // adicionando o item
-    this.save(); // Executar o metodo save()criado lá em baixo
-    this.clear(); // chamei o metodo clear , para branquaer o campo ao adicionar
-    this.changeMode('list');
+    //const title = this.form.controls['title'].value; // recebe um valor do title
+    //const id = this.todos.length + 1; // pegando o id pela quantidade do todos
+    //this.todos.push(new Todo(id, title, false)) // adicionando o item
+    //this.save(); // Executar o metodo save()criado lá em baixo
+    //this.clear(); // chamei o metodo clear , para branquaer o campo ao adicionar
+    //this.changeMode('list');
+
+    const id = dadosSpool.length + 1;
+    const spool = tagInput.value;
+    const peso = pesoSpoolFinal();
+    dadosSpool.push(new dadosSpool(id, spool, peso ))
+    salvar();
+  
   }
