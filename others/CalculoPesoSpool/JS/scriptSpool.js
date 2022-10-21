@@ -302,10 +302,7 @@ function btnCalculoFinal() {
     pesoConexaoSpoolTotal()
     pesoTuboFinal()
 
-    pesoSpoolFinal()
-    add()
-    
-    
+    pesoSpoolFinal() 
 
 }
 
@@ -376,7 +373,6 @@ btnRefresh.addEventListener("click", function() {
 var dadosSpool = []    
 
 function add() {
-    
     dadosSpool.push({
         id: dadosSpool.length+1,
         spool: tagInput.value,
@@ -390,10 +386,16 @@ function salvar() {
     dadosSpool.spool = tagInput.value;
     dadosSpool.peso = pesoSpoolFinal();
 
-    const dadosSP = JSON.stringify(dadosSpool); // recebe na var dados String/Json
+    if (dadosSpool.spool != "" & pesoSpoolFinal() != 0) {
+    // recebe na var dados String/Json
+    const dadosSP = JSON.stringify(dadosSpool); 
 
     // Transformar o objeto em string e salvar em localStorage
     localStorage.setItem('dadosSpool', dadosSP);
+    alert("Spool Salvo com Sucesso !");
+    } else {
+        alert("Insira o Spool e Peso do spool");
+    }
     
 }
 
@@ -409,3 +411,8 @@ function load() {
 
     
 }
+
+
+//--------------------------------------------------------------------------
+
+
