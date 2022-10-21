@@ -404,6 +404,8 @@ function load() {
 
     // transformar em objeto novamente
     var pessoaObj = JSON.parse(spoolString);
+    console.log(pessoaObj)
 
-    console.log(pessoaObj);
+
+    
 }
