@@ -303,7 +303,9 @@ function btnCalculoFinal() {
     pesoTuboFinal()
 
     pesoSpoolFinal()
-    salvar()
+    add()
+    
+    
 
 }
 
@@ -371,35 +373,37 @@ btnRefresh.addEventListener("click", function() {
 // ------------------------ SALVANDO INFORMAÇÕES ---------------//
 
 
-var dadosSpool = {
-    id: 0,
-    spool: 0,
-    peso: 0,
-}    
+var dadosSpool = []    
+
+function add() {
+    
+    dadosSpool.push({
+        id: dadosSpool.length+1,
+        spool: tagInput.value,
+        peso: pesoSpoolFinal(),
+    })
+    salvar()
+}
+
 
 function salvar() {
     dadosSpool.spool = tagInput.value;
     dadosSpool.peso = pesoSpoolFinal();
 
     const dadosSP = JSON.stringify(dadosSpool); // recebe na var dados String/Json
-    localStorage.setItem(dadosSpool, dadosSP); // Setar ou inserir no localstorage como chave e valor
-    console.log(dadosSP)
 
+    // Transformar o objeto em string e salvar em localStorage
+    localStorage.setItem('dadosSpool', dadosSP);
+    
 }
 
 
-function add () {
-    //const title = this.form.controls['title'].value; // recebe um valor do title
-    //const id = this.todos.length + 1; // pegando o id pela quantidade do todos
-    //this.todos.push(new Todo(id, title, false)) // adicionando o item
-    //this.save(); // Executar o metodo save()criado lá em baixo
-    //this.clear(); // chamei o metodo clear , para branquaer o campo ao adicionar
-    //this.changeMode('list');
+function load() {
+    // Receber a string
+    var spoolString = localStorage.getItem(dadosSpool);
 
-    const id = dadosSpool.length + 1;
-    const spool = tagInput.value;
-    const peso = pesoSpoolFinal();
-    dadosSpool.push(new dadosSpool(id, spool, peso ))
-    salvar();
-  
-  }
+    // transformar em objeto novamente
+    var pessoaObj = JSON.parse(spoolString);
+
+    console.log(pessoaObj.peso);
+}
