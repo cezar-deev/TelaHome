@@ -400,10 +400,10 @@ function salvar() {
 
 function load() {
     // Receber a string
-    var spoolString = localStorage.getItem(dadosSpool);
+    var spoolString = localStorage.getItem('dadosSpool');
 
     // transformar em objeto novamente
     var pessoaObj = JSON.parse(spoolString);
 
-    console.log(pessoaObj.peso);
+    console.log(pessoaObj);
 }
